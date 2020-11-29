@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Reico32076</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reico</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+       <%= yield %>
+     <footer class="footer">
+      <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
+     </footer>
   </body>
 </html>

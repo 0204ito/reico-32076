@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2020-11-28T09:32:48.272Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" version="13.6.5" etag="PKPrlguQchPZF_0kyMya">
+<mxfile host="65bd71144e" modified="2020-11-28T10:03:25.879Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" version="13.6.5" etag="XQgOYdJAl-TXZdAeQBOO">
     <diagram id="lyI2KkDharn-gFjJ3-VB" name="ページ1">
-        <mxGraphModel dx="728" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
+        <mxGraphModel dx="940" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -25,23 +25,38 @@
                 <mxCell id="2" value="users" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="1">
                     <mxGeometry x="110" y="170" width="170" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="nickname&#10;emai&#10;passwordl&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#FEFAE0;" vertex="1" parent="2">
+                <mxCell id="3" value="nickname   string uniquel:false&#10;emai          string uniquel:false&#10;passwordl  string uniquel:false&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#FEFAE0;" vertex="1" parent="2">
                     <mxGeometry y="30" width="170" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="refriges" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="1">
-                    <mxGeometry x="444" y="170" width="210" height="140" as="geometry"/>
+                    <mxGeometry x="444" y="170" width="256" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="food&#10;product_name&#10;category&#10;buy_day&#10;sell_buy&#10;store_name" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#FEFAE0;" vertex="1" parent="4">
-                    <mxGeometry y="30" width="210" height="110" as="geometry"/>
+                <mxCell id="5" value="food                                         string null:false&#10;product_name&#10;category_id                              string null:false    &#10;buy_day                  　               date null:false&#10;sell_buy&#10;store_name&#10;user       references null:false,foreign_key:true" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#FEFAE0;" vertex="1" parent="4">
+                    <mxGeometry y="30" width="256" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" value="comments" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="1">
-                    <mxGeometry x="284" y="400" width="160" height="100" as="geometry"/>
+                    <mxGeometry x="260" y="410" width="260" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="text&#10;user&#10;refriges" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#FEFAE0;" vertex="1" parent="9">
-                    <mxGeometry y="30" width="160" height="70" as="geometry"/>
+                <mxCell id="10" value="text                                             text null:false&#10;user       references null:false,foreign_key:true&#10;refriges  references null:false,foreign_key:true" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#FEFAE0;" vertex="1" parent="9">
+                    <mxGeometry y="30" width="260" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="&lt;h1&gt;Heading&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;sketch=0;fontColor=#FEFAE0;" vertex="1" parent="1">
-                    <mxGeometry x="260" y="290" width="190" height="120" as="geometry"/>
+                <mxCell id="17" value="has_many : users" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FEFAE0;" vertex="1" parent="1">
+                    <mxGeometry x="615" y="330" width="110" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="belongs_to : refrige" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FEFAE0;" vertex="1" parent="1">
+                    <mxGeometry x="65" y="290" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="has_many : comments" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FEFAE0;" vertex="1" parent="1">
+                    <mxGeometry x="613" y="349" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="belongs_to : refrige" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FEFAE0;" vertex="1" parent="1">
+                    <mxGeometry x="325" y="530" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="has_one : comment" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FEFAE0;" vertex="1" parent="1">
+                    <mxGeometry x="67" y="307" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="belongs_to : user" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FEFAE0;" vertex="1" parent="1">
+                    <mxGeometry x="325" y="550" width="110" height="20" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
