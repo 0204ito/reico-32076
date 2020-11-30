@@ -1,52 +1,30 @@
- <body>
 
-<header class="header">
-      <div class="inner">
-        <div class="nav">
-          <div class="nav__left">
-            <%= link_to image_tag("logo.png", class: :logo), root_path %>
-
-          </div>
-          <%# ログインしているときは以下を表示するようにしましょう %>
-           <% if user_signed_in? %>
-            <div class="nav__right"> 
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-               <%= link_to "my reico", root_path, class: :nav__btn %>
-            </div> 
-          <%# // ログインしているときは上記を表示するようにしましょう %>
-          <% else %>
-          <%# ログインしていないときは以下を表示するようにしましょう %>
-            <div class="nav__right">
-              <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
-              <%= link_to "新規登録",  new_user_registration_path, class: :nav__btn %>
-            </div>
-          <%# // ログインしていないときは上記を表示するようにしましょう %>
-          <% end %>
-        </div>
-      </div>
-</header>
-
-
+<%# CSS・・・assets/stylesheets/refiges/index.css.erb %>
+<%= render "shared/header"%>
 
 <%#= メインページ %>
 <div class='main'>
-  <div class="main-box">
-    <h1 class="main-title">
-    あなたの生活を　もっとスマートに
-    </h1>
-    <p class="subtitle-title">
-    お家の冷蔵庫　管理してみませんか？
-    </p>
-    <p class="mini-title">
-    お出かけ先や　仕事帰り
-    </p>
-    <p class="text1">冷蔵庫の中身がすぐわかる！</p>
-    <p class="text1">買い物リストがすぐ作れる！</p>
-    <p class="text1">賞味期限もチェックできるから食品ロスも防げちゃう！</p>
-    <p class="text1">家族で冷蔵庫をシェアすれば　お使いを頼んだり　夕飯のリクエストもできるんです。</p>
-    <h2 class="end-title">
-    ママにも　家族にも　優しいアプリです</p>
-    </h2>
+  <div class='sabu-box'>
+    <div class="main-box">
+      <h1 class="main-title">
+      あなたの生活を　もっとスマートに
+      </h1>
+      <p class="subtitle-title">
+      お家の冷蔵庫　管理してみませんか？
+      </p>
+      <p class="mini-title">
+      お出かけ先や　仕事帰り
+      </p>
+      <p class="text1">冷蔵庫の中身がすぐわかる！</p>
+      <p class="text1">買い物リストがすぐ作れる！</p>
+      <p class="text1">賞味期限もチェックできるから食品ロスも防げちゃう！</p>
+      <p class="text1">家族で冷蔵庫をシェアすれば　お使いを頼んだり　夕飯のリクエストもできるんです。</p>
+      <h2 class="end-title">
+      ママにも　家族にも　優しいアプリです</p>
+      </h2>
+    </div>
+    <%= link_to "my reico", root_path, class: :reico__btn %>
+  </div>
 </div>
 <%#= ここから上メインページ %>
 
