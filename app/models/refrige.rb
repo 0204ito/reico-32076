@@ -5,7 +5,7 @@ class Refrige < ApplicationRecord
     validates :user_id
   end
 
-  belongs_to :user
-  has_many :foods
-  has_many :users, through: :refriges_users
+  has_many :refrige_users
+  has_many :users, through: :refrige_users
+  
 end
