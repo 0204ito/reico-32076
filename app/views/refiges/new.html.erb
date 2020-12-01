@@ -1,0 +1,42 @@
+<header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
+            <%= link_to image_tag("logo.png", class: :logo), root_path %>
+          </div>
+        </div>
+      </div>
+</header>
+
+
+<div class="contents-row">
+  <div class="container">
+    <h2 class="new-sing">My reico up</h2>
+    <p class="newreico-title">あなたの冷蔵庫を登録してください</p>
+     <%= form_with model: @refrige,id: 'new_user', class: 'new_user', local: true do |f| %> 
+
+<%#エラーメッセージを表示させる記述が必要%>
+      <div class="form-group">
+        <div class="field">
+          <label class="form-text">My reico name</label>
+          <span class="indispensable">（必須）</span>
+        </div>
+        <%= f.text_area :refrige_name, class:"input-default", id:"refrige_name", placeholder:"例) ハナコreico", maxlength:"40" %>
+     </div>
+
+     <div class="form-group">
+        <div class="field">
+          <label class="form-text">メンバー</label>
+          <span class="indispensable">（必須）</span>
+        </div>
+        <%= f.text_area :refrige_name, class:"input-default", id:"refrige_name", placeholder:"例) タロウ", maxlength:"40" %>
+     </div>
+
+
+
+     <div class="actions">
+        <%= f.submit "Up",class:"send" %>
+    </div> %>
+    <% end %> 
+  </div>
+</div>
