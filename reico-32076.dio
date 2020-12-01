@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2020-12-01T09:09:39.499Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="tlIM_4AP81r7cT1gD6ej" version="13.6.5">
+<mxfile host="65bd71144e" modified="2020-12-01T09:52:54.809Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="h0JcLXyFQnNIRmslNXmP" version="13.6.5">
     <diagram id="lyI2KkDharn-gFjJ3-VB" name="ページ1">
         <mxGraphModel dx="968" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
             <root>
@@ -17,10 +17,10 @@
                         <mxPoint x="300" y="398" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="17" value="has_many : users:through: :refriges_users" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FEFAE0;" parent="1" vertex="1">
+                <mxCell id="17" value="has_many : users,through: :refriges_users" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FEFAE0;" parent="1" vertex="1">
                     <mxGeometry x="560" y="120" width="240" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="has_many : refriges : through: :refriges_users" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FEFAE0;" parent="1" vertex="1">
+                <mxCell id="18" value="has_many : refriges , through: :refriges_users" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FEFAE0;" parent="1" vertex="1">
                     <mxGeometry x="10" y="120" width="260" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="22" value="has_many :foods" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FEFAE0;" parent="1" vertex="1">

@@ -7,4 +7,5 @@ class Refrige < ApplicationRecord
 
   belongs_to :user
   has_many :foods
+  has_many :users, through: :refriges_users
 end
