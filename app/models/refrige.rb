@@ -1,11 +1,10 @@
 class Refrige < ApplicationRecord
 
-  with_options presence: true do
-    validates :refrige_name
-    validates :user_id
-  end
+  
+    validates :refrige_name, presence: true
+
 
   has_many :refrige_users
-  has_many :users, through: :refrige_users
+  has_many :users, through: :refrige_users, dependent: :destroy
   
 end
