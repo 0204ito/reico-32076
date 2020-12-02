@@ -1,0 +1,18 @@
+
+.newreico-title{
+  font-size: 1.3em;
+  color: rgb(160, 218, 238);
+  margin-bottom: 20px;
+}
+
+.field{
+  font-size: 1em;
+  color: rgb(250, 237, 237);
+}
+.user-group select{
+  margin-bottom: 20px;
+  padding: 22px 188px 22px 10px;
+  font-size: 93%;
+  line-height: 1.1em;
+border: none;
+}

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "refiges#index"
-  resources :refiges
+  root to: "reicos#index"
+  resources :refriges, only: [ :new, :create]
 end
