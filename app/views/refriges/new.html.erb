@@ -29,13 +29,13 @@
             <label class="form-text">メンバー</label>
           </div>
           <div class="user-group">
-            <select name="refrige[user_ids][]">
+            <select nickname="refrige[user_ids][]">
               <option value="">チャットするユーザーを選択してください</option>
               <% User.where.not(id: current_user.id).each do |user| %>
                 <option value=<%= user.id %>><%= user.nickname %></option>
               <% end %>
             </select>
-             <input name="refrige[user_ids][]" type="hidden" value=<%= current_user.id %>>
+             <input nickname="refrige[user_ids][]" type="hidden" value=<%= current_user.id %>>
          </div>
         </div>
         <div class="actions">
