@@ -10,7 +10,7 @@ class RefrigesController < ApplicationController
   def create
     @refrige = Refrige.new(refrige_params)
     if @refrige.save
-      redirect_to new_refrige_path
+      redirect_to refriges_path
     else
       render :new
     end

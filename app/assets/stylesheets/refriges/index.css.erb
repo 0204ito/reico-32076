@@ -1,0 +1,113 @@
+/*ここから下header部分*/
+
+.menu__btn{
+  display: inline-block;
+  padding: 1.2em 2.6em;
+  font-size: 1.0em;
+  color: #87CEFA;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin:0 10px;
+}
+.menu__btn:hover{
+  color: #fff;
+  background: #87CEFA;
+}
+/*ここから上header部分*/
+/*ここから下left部分*/
+
+.mainpage {
+  display: flex;
+  background-image: url("<%= asset_path('cook1.png') %>");
+  background-size: cover;
+}
+.page_left {
+  width: 350px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.sabu_left{
+    margin: 70px 0 ;
+   overflow: scroll; 
+  }
+
+.refrige__btn{
+  display: inline-block;
+  padding: 1.2em 2.6em;
+  font-size: 1.0em;
+  background-color: #e4faff;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin:0 10px 20px 10px;
+}
+
+.refrige__btn:hover{
+  background: #white;
+}
+
+.refrige_name a {
+  text-decoration: none;
+  color: #71c1f3;
+  font-size: 1em;
+}
+
+/*ここから上left部分*/
+/*ここから下right部分*/
+
+.page_right {
+  width: calc(100vw - 350px);
+  display: flex;
+  padding-right:10px;
+}
+
+.sabu_right{
+background-color: white;
+  width: 1000px;
+  margin: 70px 0 ;
+  padding:30px;
+  border-radius: 15px;
+  overflow: scroll; 
+}
+
+<%# .foods{
+  display: flex;
+} %>
+.food{
+  display: flex;
+  padding-bottom:７px;
+}
+.food_name{
+ color: #434a54;
+  font-size: 16px;
+  padding-right:10px;
+}
+.product_name{
+   color: #434a54;
+  font-size: 16px;
+   padding-right:10px;
+}
+.category{
+   color: #434a54;
+  font-size: 16px;
+   padding-right:10px;
+}
+.purchase_date{
+  color: #434a54;
+  font-size: 16px;
+   padding-right:10px;
+}
+.sell_by{
+  color: #434a54;
+  font-size: 16px;
+   padding-right:10px;
+}
+.shop{
+  color: #434a54;
+  font-size: 16px;
+}
