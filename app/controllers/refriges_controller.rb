@@ -1,6 +1,7 @@
 class RefrigesController < ApplicationController
   before_action :authenticate_user!
   def index
+    # @refrige = Refrige.find(params[:id])
   end
 
   def new

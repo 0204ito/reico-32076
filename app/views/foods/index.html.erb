@@ -1,9 +1,52 @@
+<header class="header">
+    <div class="inner">
+      <div class="nav">
+        <div class="left_bar">
+          <div class="nav__left">
+            <%= link_to image_tag("logo.png", class: :logo), root_path %>
+          </div>
+        </div>
+        <div class="right_bar">
+          <div class="menu__right"> 
+             <%= link_to "買いました", root_path, class: :menu__btn %>
+          </div> 
+          <div class="menu__right"> 
+             <%= link_to "食べました", root_path, class: :menu__btn %>
+          </div> 
+          <div class="menu__right"> 
+            <%= link_to "リクエスト", root_path, class: :menu__btn %>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+
+<div class="mainpage">
+<%# <%= ここから画面left %> 
+  <div class="page_left">
+    <div class="sabu_left">
+            <%# <%= ここから冷蔵庫名 一覧 %> 
+          <%# <div class="refriges"> %>
+            <% current_user.refriges.each do |refrige| %>
+              <div class="refrige__btn">
+                <div class="refrige_name">
+                  <a href="#"><%= refrige.refrige_name %></a>
+               </div>
+             </div>
+            <% end %>
+         <%# </div> %>
+            <%# <%= ここまで冷蔵庫名 一覧 %>
+    </div>
+  </div>
+<%# <%= ここまで画面left %> 
 
 <%# <%= ここから画面right %> 
   <div class="page_right">
     <div class="sabu_right">
-     <%# <%= ここから食材一覧 %> 
-       <div class="foods">
+     <%# <%= ここから食材一覧 %>
+
+     
+     <div class="foods">
          <div class="food">
           <div class="food_name">
            ヨーグルト
@@ -48,8 +91,10 @@
           </div>
          </div>
        </div>
+     
      <%# <%= ここまで食材一覧 %> 
     </div>
   </div>
 </div>
 <%# <%= ここまで画面right %> 
+
