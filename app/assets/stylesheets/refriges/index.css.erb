@@ -25,15 +25,42 @@
   background-size: cover;
 }
 .page_left {
-  width: 350px;
+  width: 550px;
   height: 100vh;
   display: flex;
   justify-content: center;
 }
 .sabu_left{
-    margin: 70px 0 ;
+  margin: 70px 0 ;
+  display: flex;
+  flex-direction: column;
    overflow: scroll; 
-  }
+}
+
+.name{
+  display: flex;
+  align-items:flex-end;
+  margin-bottom:30px;
+}
+.name_left{
+  padding-left:10px;
+}
+.name_left a {
+  font-size: 25px;
+  color: #e4faff;
+  text-decoration: none;
+}
+.name_left a:hover {
+  text-decoration: underline;
+}
+.name_end{
+  font-size: 20px; 
+  color: #e4faff;
+  padding-left: 10px;
+}
+
+
+
 
 .refrige__btn{
   display: inline-block;
@@ -48,7 +75,7 @@
 }
 
 .refrige__btn:hover{
-  background: #white;
+ background-color: #fff;
 }
 
 .refrige_name a {
@@ -58,56 +85,3 @@
 }
 
 /*ここから上left部分*/
-/*ここから下right部分*/
-
-.page_right {
-  width: calc(100vw - 350px);
-  display: flex;
-  padding-right:10px;
-}
-
-.sabu_right{
-background-color: white;
-  width: 1000px;
-  margin: 70px 0 ;
-  padding:30px;
-  border-radius: 15px;
-  overflow: scroll; 
-}
-
-<%# .foods{
-  display: flex;
-} %>
-.food{
-  display: flex;
-  padding-bottom:７px;
-}
-.food_name{
- color: #434a54;
-  font-size: 16px;
-  padding-right:10px;
-}
-.product_name{
-   color: #434a54;
-  font-size: 16px;
-   padding-right:10px;
-}
-.category{
-   color: #434a54;
-  font-size: 16px;
-   padding-right:10px;
-}
-.purchase_date{
-  color: #434a54;
-  font-size: 16px;
-   padding-right:10px;
-}
-.sell_by{
-  color: #434a54;
-  font-size: 16px;
-   padding-right:10px;
-}
-.shop{
-  color: #434a54;
-  font-size: 16px;
-}

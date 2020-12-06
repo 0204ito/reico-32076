@@ -1,0 +1,66 @@
+/*ここから下right部分*/
+
+.page_right {
+  width: calc(100vw - 600px);
+  display: flex;
+  padding-right:10px;
+}
+.sabu_right{
+background-color: white;
+  width: 90%;
+  margin: 70px 0 ;
+  border-radius: 15px;
+  overflow: scroll; 
+}
+
+.in_right{
+padding: 20px;
+}
+
+.refrige_right{
+padding-bottom: 10px;
+}
+
+.refrige_right a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6acfe6;
+  text-decoration: none;
+  }
+.refrige_right a:hover {
+  text-decoration: underline;
+}
+
+.food{
+  display: flex;
+  padding-bottom:７px;
+}
+.food_name{
+ color: #434a54;
+  font-size: 16px;
+  padding-right:10px;
+}
+.product_name{
+   color: #434a54;
+  font-size: 16px;
+   padding-right:10px;
+}
+.category{
+   color: #434a54;
+  font-size: 16px;
+   padding-right:10px;
+}
+.purchase_date{
+  color: #434a54;
+  font-size: 16px;
+   padding-right:10px;
+}
+.sell_by{
+  color: #434a54;
+  font-size: 16px;
+   padding-right:10px;
+}
+.shop{
+  color: #434a54;
+  font-size: 16px;
+}
