@@ -10,10 +10,10 @@
                <%# ログインしているときは以下を表示するようにしましょう %>
           <div class="right_bar">
             <% if user_signed_in? %>
-              <div class="nav__right"> 
+              <div class="nav__right">
                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
                  <%= link_to "My home", refriges_path, class: :nav__btn %>
-              </div> 
+              </div>
                <%# // ログインしているときは上記を表示するようにしましょう %>
               <% else %>
                <%# ログインしていないときは以下を表示するようにしましょう %>

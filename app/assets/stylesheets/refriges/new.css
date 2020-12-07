@@ -1,6 +1,7 @@
+/* user.css.erb */
 
 .newreico-title{
-  font-size: 1.3em;
+  font-size: 1.1em;
   color: rgb(160, 218, 238);
   margin-bottom: 20px;
 }
@@ -10,6 +11,7 @@
   color: rgb(250, 237, 237);
 }
 .user-group select{
+  width: 500px;
   margin-bottom: 20px;
   padding: 22px 188px 22px 10px;
   font-size: 93%;

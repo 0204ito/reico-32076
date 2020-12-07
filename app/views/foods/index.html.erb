@@ -8,7 +8,7 @@
         </div>
         <div class="right_bar">
           <div class="menu__right"> 
-             <%= link_to "買いました", root_path, class: :menu__btn %>
+             <%= link_to "買いました", new_refrige_food_path, class: :menu__btn %>
           </div> 
           <div class="menu__right"> 
              <%= link_to "食べました", root_path, class: :menu__btn %>
@@ -26,15 +26,19 @@
   <div class="page_left">
     <div class="sabu_left">
             <%# <%= ここから冷蔵庫名 一覧 %> 
-          <%# <div class="refriges"> %>
-            <% current_user.refriges.each do |refrige| %>
-              <div class="refrige__btn">
-                <div class="refrige_name">
-                  <a href="#"><%= refrige.refrige_name %></a>
-               </div>
-             </div>
-            <% end %>
-         <%# </div> %>
+          <div class="name">
+            <div class="name_left">
+              <%= link_to current_user.nickname, edit_user_path(current_user) %>
+            </div>
+             <p class="name_end">の reico</p>
+          </div>
+          <% current_user.refriges.each do |refrige| %>
+            <div class="refrige__btn">
+              <div class="refrige_name">
+                <%= link_to refrige.refrige_name, refrige_foods_path(refrige.id) %>
+              </div>
+            </div>
+          <% end %>
             <%# <%= ここまで冷蔵庫名 一覧 %>
     </div>
   </div>
@@ -44,54 +48,56 @@
   <div class="page_right">
     <div class="sabu_right">
      <%# <%= ここから食材一覧 %>
+      <div class="in_right">
+          <div class="refrige_right">
+           <%= link_to @refrige.refrige_name, edit_refrige_path(@refrige.id) %>
+          </div>
+          <div class="foods">
+            <div class="food">
+              <div class="food_name">
+              ヨーグルト
+              </div>
+              <div class="product_name">
+              明治ブルガリアヨーグルト
+              </div>
+              <div class="category">
+              乳製品
+              </div>
+              <div class="purchase_date">
+              3月24日
+              </div>
+              <div class="sell_by">
+              4月10日
+              </div>
+              <div class="shop">
+              イオン江南店
+              </div>
+            </div>
+          </div>
 
-     
-     <div class="foods">
-         <div class="food">
-          <div class="food_name">
-           ヨーグルト
+          <div class="foods">
+            <div class="food">
+              <div class="food_name">
+              にんじん
+              </div>
+              <div class="product_name">
+              所農園のにんじん
+              </div>
+              <div class="category">
+              野菜
+              </div>
+              <div class="purchase_date">
+              3月24日
+              </div>
+              <div class="sell_by">
+              。。。。。
+              </div>
+              <div class="shop">
+              イオン江南店
+              </div>
+            </div>
           </div>
-          <div class="product_name">
-           明治ブルガリアヨーグルト
-          </div>
-          <div class="category">
-           乳製品
-          </div>
-          <div class="purchase_date">
-           3月24日
-          </div>
-          <div class="sell_by">
-           4月10日
-          </div>
-          <div class="shop">
-           イオン江南店
-          </div>
-         </div>
-       </div>
-
-       <div class="foods">
-         <div class="food">
-          <div class="food_name">
-           にんじん
-          </div>
-          <div class="product_name">
-           所農園のにんじん
-          </div>
-          <div class="category">
-           野菜
-          </div>
-          <div class="purchase_date">
-           3月24日
-          </div>
-          <div class="sell_by">
-           。。。。。
-          </div>
-          <div class="shop">
-           イオン江南店
-          </div>
-         </div>
-       </div>
-     
+        </div>
      <%# <%= ここまで食材一覧 %> 
     </div>
   </div>
