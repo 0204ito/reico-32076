@@ -8,10 +8,55 @@
         </div>
         <div class="right_bar">
           <div class="menu__right"> 
-             <%= link_to "my home", root_path, class: :menu__btn %>
+             <%= link_to "my reico",  refrige_foods_path, class: :menu__btn %>
           </div> 
         </div>
       </div>
     </div>
 </header>
 
+<div class="food-page">  
+     <p class="new-food-title">
+      購入食材を冷蔵庫に追加しよう
+     </p>
+  <%= form_with model: @form, url: refrige_foods_path, method: :post, local: true do |form|%>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>食材名</th>
+          <th>商品名</th>
+          <th>カテゴリー</th>
+          <th>購入日</th>
+          <th>賞味期限</th>
+          <th>購入店</th>
+        </tr>
+      </thead>
+      <tbody class="bulk-registration-field">
+         <%= form.fields_for :foods do |f| %>
+          <tr class="item">
+            <td>
+              <%= f.text_field :food_name, class: 'form-control'%>
+            </td>
+            <td>
+              <%= f.text_field :product_name, class: 'form-control' %>
+            </td>
+            <td>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:'form-control'}) %>
+            </td>
+            <td>
+              <%= f.text_field :purchase_date, class: 'form-control' %>
+            </td>
+            <td>
+              <%= f.text_field :sell_by, class: 'form-control' %>
+            </td>
+            <td>
+              <%= f.text_field :shop, class: 'form-control' %>
+            </td>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="text-center">
+      <%= form.submit '一括登録', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
