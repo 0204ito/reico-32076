@@ -21,7 +21,12 @@
   <div class="page_left">
     <div class="sabu_left">
             <%# <%= ここから冷蔵庫名 一覧 %> 
-          <%# <div class="refriges"> %>
+          <div class="name">
+            <div class="name_left">
+              <%= link_to current_user.nickname, edit_user_path(current_user) %>
+            </div>
+             <p class="name_end">の reico</p>
+          </div>
             <% current_user.refriges.each do |refrige| %>
               <div class="refrige__btn">
                 <div class="refrige_name">
@@ -29,7 +34,7 @@
                </div>
              </div>
             <% end %>
-         <%# </div> %>
+        
             <%# <%= ここまで冷蔵庫名 一覧 %>
     </div>
   </div>

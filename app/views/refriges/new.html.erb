@@ -1,9 +1,14 @@
 <header class="header">
       <div class="inner">
         <div class="nav">
-          <div class="nav__left">
-            <%= link_to image_tag("logo.png", class: :logo), root_path %>
+          <div class="left_bar">
+            <div class="nav__left">
+              <%= link_to image_tag("logo.png", class: :logo), root_path %>
+            </div>
           </div>
+
+           <div class="right_bar">
+           </div>
         </div>
       </div>
 </header>
@@ -12,7 +17,7 @@
 <div class="contents-row">
   <div class="container">
      <h2 class="new-sing">My reico up</h2>
-     <p class="newreico-title">あなたの冷蔵庫を作りましょう！</p>
+     <p class="newreico-title">あなたの冷蔵庫 (reico) を作りましょう！</p>
      <%= form_with model: @refrige,id: 'new_user', class: 'new_user', local: true do |f| %> 
 
         <%#エラーメッセージを表示させる記述が必要%>
@@ -26,15 +31,16 @@
 
         <div class="form-group">
           <div class="field">
-            <label class="form-text">メンバー</label>
+            <label class="form-text">メンバー(選択せずに一人からでも始められます)</label>
           </div>
           <div class="user-group">
-            <select name="refrige[user_ids][]">
-              <option value="">チャットするユーザーを選択してください</option>
+           <%= f.collection_select(:user_ids, User.where.not(id: current_user.id), :id, :nickname, {:prompt => "reicoを共有するユーザーを選択してください"}, {:multiple => true}) %>
+              <%# <select name="refrige[user_ids][]">複数名選択したい %>
+              <%# <option value="">reicoに招待するユーザーを選択してください</option>
               <% User.where.not(id: current_user.id).each do |user| %>
-                <option value=<%= user.id %>><%= user.nickname %></option>
-              <% end %>
-            </select>
+                <%# <option value><%= user.id><%= user.nickname %>  <%#</option> %>
+              <%# <% end %>
+            <%# </select> %> 
              <input name="refrige[user_ids][]" type="hidden" value=<%= current_user.id %>>
          </div>
         </div>
