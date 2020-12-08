@@ -1,12 +1,11 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   def edit
-
   end
 
   def update
     if current_user.update(user_params)
-      redirect_to  refriges_path
+      redirect_to refriges_path
     else
       render :edit
     end
@@ -17,5 +16,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:nickname, :email)
   end
-
 end

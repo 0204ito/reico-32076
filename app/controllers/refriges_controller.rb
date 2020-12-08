@@ -1,10 +1,9 @@
 class RefrigesController < ApplicationController
   before_action :authenticate_user!
   def index
-
   end
 
-  def new 
+  def new
     @refrige = Refrige.new
   end
 
@@ -35,11 +34,9 @@ class RefrigesController < ApplicationController
     redirect_to refriges_path if refrige.destroy
   end
 
-
   private
 
   def refrige_params
     params.require(:refrige).permit(:refrige_name, user_ids: [])
   end
-
 end
