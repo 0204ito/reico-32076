@@ -20,8 +20,7 @@
   <div class="container">
     <h2 class="new-sing">User edit</h2>
     <%= form_with model: current_user, id: 'new_user', class: 'new_user', local: true do |f| %>
-      <%# <%= devise_error_messages! %> 
-
+     <%= render 'shared/error_messages', model: f.object%>
       <div class="form-group">
         <div class="field">
           <label class="form-text">ニックネーム</label>
