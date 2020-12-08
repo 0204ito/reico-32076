@@ -18,7 +18,7 @@ class RefrigesController < ApplicationController
   end
 
   def edit
-     redirect_to action: :index unless current_user.id && @refrige.user_ids
+    redirect_to action: :index unless current_user.id && @refrige.user_ids
   end
 
   def update
@@ -39,7 +39,6 @@ class RefrigesController < ApplicationController
   def refrige_params
     params.require(:refrige).permit(:refrige_name, user_ids: [])
   end
-
 
   def set_refrige
     @refrige = Refrige.find(params[:id])
