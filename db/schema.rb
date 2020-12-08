@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_091642) do
   end
 
   create_table "refriges", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "refrige_name", null: false
+    t.string "refrige_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
