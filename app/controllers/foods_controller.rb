@@ -1,7 +1,7 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @refrige =  Refrige.find(params[:refrige_id])
+    @refrige = Refrige.find(params[:refrige_id])
   end
 
   def new
@@ -22,6 +22,6 @@ class FoodsController < ApplicationController
 
   def food_collection_params
     params.require(:form_food_collection)
-    .permit( foods_attributes: [ :food_name, :product_name, :category_id, :purchase_date, :sell_by, :shop]).merge( refrige_id: params[:refrige_id])
+          .permit(foods_attributes: [:food_name, :product_name, :category_id, :purchase_date, :sell_by, :shop]).merge(refrige_id: params[:refrige_id])
   end
 end

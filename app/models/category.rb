@@ -14,11 +14,10 @@ class Category < ActiveHash::Base
     { id: 12, name: 'ご飯類' },
     { id: 13, name: 'パン類' },
     { id: 14, name: '麺類' },
-    { id: 15, name: 'その他' },
+    { id: 15, name: 'その他' }
   ]
 
-  include ActiveHash::Associations#記述してmoduleを取り込む
+  include ActiveHash::Associations # 記述してmoduleを取り込む
   has_many :articles
-#ActiveHashを用いて、has_manyを設定する
+  # ActiveHashを用いて、has_manyを設定する
 end
-
