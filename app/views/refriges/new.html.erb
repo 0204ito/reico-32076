@@ -19,7 +19,7 @@
      <h2 class="new-sing">My reico up</h2>
      <p class="newreico-title">あなたの冷蔵庫 (reico) を作りましょう！</p>
      <%= form_with model: @refrige,id: 'new_user', class: 'new_user', local: true do |f| %> 
-
+        <%= render 'shared/error_messages', model: f.object%>
         <%#エラーメッセージを表示させる記述が必要%>
         <div class="form-group">
           <div class="field">

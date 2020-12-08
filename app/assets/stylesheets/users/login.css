@@ -1,0 +1,6 @@
+.login-flash-message {
+  color: rgb(243, 226, 235);
+  font-size: 1.3vw;
+  display: flex;
+  justify-content: center;
+}
