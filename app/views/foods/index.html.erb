@@ -22,9 +22,9 @@
 </header>
 
 <div class="mainpage">
-<%# <%= ここから画面left %> 
-  <div class="page_left">
-    <div class="sabu_left">
+     <%# <%= ここから画面left %> 
+    <div class="page_left">
+       <div class="sabu_left">
             <%# <%= ここから冷蔵庫名 一覧 %> 
           <div class="name">
             <div class="name_left">
@@ -40,11 +40,11 @@
             </div>
           <% end %>
             <%# <%= ここまで冷蔵庫名 一覧 %>
+       </div>
     </div>
-  </div>
-<%# <%= ここまで画面left %> 
+    <%# <%= ここまで画面left %> 
 
-<%# <%= ここから画面right %> 
+    <%# <%= ここから画面right %> 
   <div class="page_right">
     <div class="sabu_right">
      <%# <%= ここから食材一覧 %>
@@ -52,52 +52,28 @@
           <div class="refrige_right">
            <%= link_to @refrige.refrige_name, edit_refrige_path(@refrige.id) %>
           </div>
-          <div class="foods">
-            <div class="food">
-              <div class="food_name">
-              ヨーグルト
-              </div>
-              <div class="product_name">
-              明治ブルガリアヨーグルト
-              </div>
-              <div class="category">
-              乳製品
-              </div>
-              <div class="purchase_date">
-              3月24日
-              </div>
-              <div class="sell_by">
-              4月10日
-              </div>
-              <div class="shop">
-              イオン江南店
-              </div>
-            </div>
-          </div>
+             <table class="food">
+                 <tr>
+                  <th>食材名</th>
+                  <th>商品名</th>
+                  <th>カテゴリー</th>
+                  <th>購入日</th>
+                  <th>賞味期限</th>
+                  <th>購入店</th>
+                 </tr>
+                <% @foods.each do |food| %>
+                 <tr>
+                    <td class="food_name"> <%= food.food_name %></td>
+                    <td class="product_name"><%= food.product_name %></td>
+                    <td class="category"><%= food.category.name %></td>
+                    <td class="purchase_date"><%= food.purchase_date %></td>
+                    <td class="sell_by"><%= food.sell_by %></td>
+                    <td class="shop"><%= food.shop %></td>
+                 </tr>
+                <% end %>
+              </table>
 
-          <div class="foods">
-            <div class="food">
-              <div class="food_name">
-              にんじん
-              </div>
-              <div class="product_name">
-              所農園のにんじん
-              </div>
-              <div class="category">
-              野菜
-              </div>
-              <div class="purchase_date">
-              3月24日
-              </div>
-              <div class="sell_by">
-              。。。。。
-              </div>
-              <div class="shop">
-              イオン江南店
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
      <%# <%= ここまで食材一覧 %> 
     </div>
   </div>

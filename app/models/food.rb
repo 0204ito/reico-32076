@@ -8,7 +8,7 @@ class Food < ApplicationRecord
     validates :purchase_date
     validates :refrige_id
   end
-  validates :genre_id, numericality: { other_than: 1 }
+  validates :category_id, numericality: { other_than: 1 }
   # ジャンルの選択が「--」の時は保存できないようにする
 
   belongs_to :refrige, validate: false
