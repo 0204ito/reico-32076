@@ -50,7 +50,7 @@ table tr:hover{
 }
 
 table th,table td{
-  padding: 10px 10px;
+  padding: 10px 0;
 }
 table th{
   color: rgb(231, 95, 95);
