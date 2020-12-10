@@ -62,5 +62,3 @@ group :production do
   gem 'unicorn', '5.4.1'
 end
 gem 'active_hash'
-gem 'jquery-rails'
-gem 'jquery-ui-rails'

@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2020_12_03_091642) do
     t.date "sell_by"
     t.string "shop"
     t.bigint "refrige_id"
-    t.boolean "availability", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["refrige_id"], name: "index_foods_on_refrige_id"
