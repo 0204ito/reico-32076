@@ -1,12 +1,13 @@
 class Form::FoodCollection < Form::Base
   FORM_COUNT = 5 # 作成したい登録フォームの数を指定
   attr_accessor :foods, :refrige_id # アクセサメソッドを定義することで、インスタンス変数に外部からアクセスできるようになる
+
   # Form::FoodCollection.foodsが使えるようになる
-  
+
   # 初期化メソッド
   def initialize(attributes = {}) # attributesの空のハッシュ
     super attributes # 親クラスのメソッドをそのまま呼び出せるsuper
-    self.foods = FORM_COUNT.times.map { Food.new } unless self.foods.present?
+    self.foods = FORM_COUNT.times.map { Food.new } unless foods.present?
   end
   # Form::FoodCollection.new(…)とするために、initializeメソッドを定義
 
@@ -14,7 +15,6 @@ class Form::FoodCollection < Form::Base
   def foods_attributes=(attributes)
     self.foods = attributes.map { |_, v| Food.new(v) }
   end
-
 
   def save
     # Food.transaction do
@@ -24,16 +24,13 @@ class Form::FoodCollection < Form::Base
     #   end
     # end
 
-    
     Food.transaction do
-      foods.each do |food|#foodsを一つづつ確認
-        return if food.food_name.blank?#blank?空のオブジェクトを判定できる。food_nameが空だったら全て保存されなくなる
-          food.refrige_id = self.refrige_id
-            unless food.save#そうでなければ保存
-          raise ActiveRecord::Rollback
-        end
+      foods.each do |food| # foodsを一つづつ確認
+        return if food.food_name.blank? # blank?空のオブジェクトを判定できる。food_nameが空だったら全て保存されなくなる
+
+        food.refrige_id = refrige_id
+        raise ActiveRecord::Rollback unless food.save # そうでなければ保存
       end
     end
   end
 end
-
