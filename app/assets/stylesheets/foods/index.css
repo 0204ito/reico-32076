@@ -81,3 +81,6 @@ table th{
   font-size: 15px;
 
 }
+tr[data-check="true"] {
+  text-decoration: line-through; 
+}

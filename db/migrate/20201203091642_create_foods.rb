@@ -8,6 +8,7 @@ class CreateFoods < ActiveRecord::Migration[6.0]
       t.date :sell_by
       t.string :shop
       t.references :refrige,       foreign_key: true
+      t.boolean :checked
       t.timestamps
     end
   end
