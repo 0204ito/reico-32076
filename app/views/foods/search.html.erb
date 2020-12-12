@@ -1,0 +1,74 @@
+<header class="header">
+    <div class="inner">
+      <div class="nav">
+        <div class="left_bar">
+          <div class="nav__left">
+            <%= link_to image_tag("logo.png", class: :logo), root_path %>
+          </div>
+        </div>
+        <div class="right_search_bar">
+           <div class="menu__search">
+             <%= form_with(url: search_refrige_foods_path, local: true, method: :get, class: "search-form") do |form| %>
+             <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+             <%= form.submit "検索", class: "search-btn" %>
+             <% end %>
+           </div>
+           <div class="right__search"> 
+             <%= link_to "my reico",  refrige_foods_path, class: :menu__btn %>
+           </div> 
+        </div>
+      </div>
+    </div>
+</header>
+
+<div class="food-page">
+   <div class="in_search">
+     <div class="search-food">
+       <%# <div class="refrige_right">
+          <%= link_to @refrige.refrige_name, edit_refrige_path(@refrige.id) %>
+       <%# </div> %>
+       <div class="search-food-title">
+         <p class="sabu-search-title">
+          ■食材をクリックすると編集できます■
+         </p>
+       </div>
+       <div class="sub_search">
+        <div class="category__search">
+          <%= link_to "カテゴリー", root_path, class: :category__btn %>
+        </div>
+        <div class="sort__search">
+          <%= link_to "並び替え", root_path, class: :sort__btn %>
+        </div>
+       </div>
+     </div>
+      <div class="sabu_food">
+         <div class="food_scroll">
+               <table class="food_table">
+                 <tr>
+                  <th>食材名</th>
+                  <th>商品名</th>
+                  <th>カテゴリー</th>
+                  <th>購入日</th>
+                  <th>賞味期限</th>
+                  <th>購入店</th>
+                 </tr>
+                 <% @foods.each do |food| %>
+                 <tr class="food" data-id=<%= food.id %> data-check=<%= food.checked %>>
+                    <td class="food_name" id="lists" > <%= food.food_name %></td>
+                    <td class="product_name" id="lists"><%= food.product_name %></td>
+                    <td class="category" id="lists"><%= food.category.name %></td>
+                    <td class="purchase_date" id="lists"><%= food.purchase_date %></td>
+                    <td class="sell_by" id="lists"><%= food.sell_by %></td>
+                    <td class="shop" id="lists"><%= food.shop %></td>
+                   </tr>
+                 <% end %>
+
+
+
+               </table>
+          </div>
+      </div>
+
+
+    </div>
+</div>

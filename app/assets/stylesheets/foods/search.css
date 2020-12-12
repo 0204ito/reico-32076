@@ -1,0 +1,118 @@
+
+
+
+.right_search_bar{
+  display: flex;
+  justify-content:flex-end ;
+  width: 100%;
+  padding-right: 35vh;
+}
+.menu__search{
+  padding: 10px 30px;
+}
+
+
+/* 検索フォーム */
+.search-form {
+  text-align: center;
+  display:flex
+  
+}
+.search-form .search-input {
+  margin-right: 10px;
+  width: 350px;
+  padding: 10px;
+  border: 1px solid #81c9f7;
+  border-radius: 3px;
+}
+.search-form .search-btn {
+  width: 30%;
+  border: 1px solid #81c9f7;
+  border-radius: 3px;
+  color: #81c9f7;
+  background: #e4faff;
+}
+.search-form .search-btn:hover{
+  color: #fff;
+  background: #ffbbd8;
+  border: 1px solid #ffbbd8;
+}
+
+
+
+/* ↓searchメインページ */
+.food-page {
+  width:100vw;
+  display: flex;
+  height: 100vh;
+}
+.in_search{
+  width: 100%;
+  margin: 30px 0 0 113px ;
+ display: block;
+
+}
+   /* 文字部分 */
+   /* 検索部分 */
+.search-food{
+  display:flex
+}
+.sabu-search-title{
+  color: white;
+  font-size: 20px;
+  margin: 10px 0 10px 20px;
+}
+
+.sub_search{
+  display: flex;
+}
+
+.category__btn{
+  display: inline-block;
+  padding: 0.3em 1.0em;
+  margin-left: 560px;
+  margin-top: 10px;
+  font-size: 1.0em;
+  background: #d1f0f7;
+  color: #71c1f3;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 3px;
+  transition: 0.4s ease;
+
+}
+.category__btn:hover{
+  color: #fff;
+  background: #ffbbd8;
+}
+.sort__btn{
+  display: inline-block;
+  padding: 0.3em 1.3em;
+  margin-top: 10px;
+  margin-left:20px ;
+  font-size: 1.0em;
+  background: #d1f0f7;
+  color: #71c1f3;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+.sort__btn:hover{
+  color: #fff;
+  background: #ffbbd8;
+}
+/* 検索部分 */
+/* 表部分 */
+.sabu_food{
+  background-color: white;
+  width: calc(100vw - 220px);
+  margin: 10px 0 30px 0;
+  padding: 20px;
+  border-radius: 15px;
+  overflow: scroll;
+  height: calc(100vh - 140px);
+}
+.food_scroll{
+  padding: 20px;
+}

@@ -30,6 +30,11 @@ class FoodsController < ApplicationController
     render json: { food: item }#foodという箱にitemを入れて渡す。
   end
 
+  def search
+    @refrige = Refrige.find(params[:refrige_id])
+    @foods = @refrige.foods.all.order(id: "DESC")
+  end
+
   private
 
   def food_collection_params
