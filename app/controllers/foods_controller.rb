@@ -1,9 +1,8 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
-  # before_action :move_to_index
   def index
     @refrige = Refrige.find(params[:refrige_id])
-    @foods = @refrige.foods
+    @foods = @refrige.foods.all.order(id: "DESC")
   end
 
   def new
@@ -19,6 +18,18 @@ class FoodsController < ApplicationController
     end
   end
 
+  def checked
+    food = Food.find(params[:id])#これをこの後、以下の記述に書き換えてる
+    if food.checked
+      food.update(checked: false)
+    else
+      food.update(checked: true)
+    end
+
+    item = Food.find(params[:id])#新しく書き換えたものを変数itemに入れる
+    render json: { food: item }#foodという箱にitemを入れて渡す。
+  end
+
   private
 
   def food_collection_params
@@ -26,9 +37,4 @@ class FoodsController < ApplicationController
           .permit(foods_attributes: [:food_name, :product_name, :category_id, :purchase_date, :sell_by, :shop, :availability]).merge(refrige_id: params[:refrige_id])
   end
 
-  # def move_to_index
-  #   unless current_user.id == food.refrige.user_ids
-  #     redirect_to action: :index
-  #   end
-  # end
 end

@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :refriges, only: [ :index, :new, :create, :edit, :update, :destroy] do
     resources :foods, only: [ :index, :new, :create]
   end
+  get 'foods/:id', to: 'foods#checked'#特定のfoodテーブルを指定するためにid
+
 end
