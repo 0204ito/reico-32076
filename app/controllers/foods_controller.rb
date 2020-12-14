@@ -25,10 +25,28 @@ class FoodsController < ApplicationController
     else
       food.update(checked: true)
     end
-
     item = Food.find(params[:id])#新しく書き換えたものを変数itemに入れる
     render json: { food: item }#foodという箱にitemを入れて渡す。
   end
+
+
+  def search
+    @refrige = Refrige.find(params[:refrige_id])
+    @foods = @refrige.foods.search(params[:keyword]).order(id: "DESC")
+  end
+
+  def category
+    @refrige = Refrige.find(params[:refrige_id])
+    @foods = @refrige.foods.where(category_id: params[:category_id]).order(id: "DESC")
+      render :search
+  end
+
+  def change
+    @refrige = Refrige.find(params[:refrige_id])
+    @foods = @refrige.foods.change(params[:change])
+      render :search
+  end
+
 
   private
 

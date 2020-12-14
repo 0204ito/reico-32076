@@ -1,0 +1,112 @@
+<header class="header">
+    <div class="inner">
+      <div class="nav">
+        <div class="left_bar">
+          <div class="nav__left">
+            <%= link_to image_tag("logo.png", class: :logo), root_path %>
+          </div>
+        </div>
+        <div class="right_search_bar">
+           <div class="menu__search">
+             <%= form_with(url: search_refrige_foods_path, local: true, method: :get, class: "search-form") do |form| %>
+             <%= form.text_field :keyword, placeholder: "食材を検索する", class: "search-input" %>
+             <%= form.submit "検索", class: "search-btn" %>
+             <% end %>
+           </div>
+           <div class="right__search"> 
+             <%= link_to "my reico",  refrige_foods_path, class: :menu__btn %>
+           </div>
+        </div>
+      </div>
+    </div>
+</header>
+
+<div class="food-page">
+   <div class="in_search">
+     <div class="search-food">
+       <div class="search-food-title">
+         <p class="sabu-search-title">
+          ■食材をクリックすると編集できます■
+         </p>
+       </div>
+       <div class="sub_search">
+
+        <div class="category__search">
+          <ul class="category_menu">
+            <li><a class="category__btn">カテゴリー</a>
+              <ul>
+                <li><%= link_to "肉類",category_refrige_foods_path(category_id:2)%></li>
+                <li><%= link_to "魚介類",category_refrige_foods_path(category_id:3)%></li>
+                <li><%= link_to "乳製品類",category_refrige_foods_path(category_id:4)%></li>
+                <li><%= link_to "卵類",category_refrige_foods_path(category_id:5)%></li>
+                <li><%= link_to "きのこ・山菜類",category_refrige_foods_path(category_id:6)%></li>
+                <li><%= link_to "野菜類",category_refrige_foods_path(category_id:7)%></li>
+                <li><%= link_to "果物類",category_refrige_foods_path(category_id:8)%></li>
+                <li><%= link_to "お惣菜類",category_refrige_foods_path(category_id:9)%></li>
+                <li><%= link_to "豆・豆腐類",category_refrige_foods_path(category_id:10)%></li>
+                <li><%= link_to "乾物・海藻類",category_refrige_foods_path(category_id:11)%></li>
+                <li><%= link_to "ご飯類",category_refrige_foods_path(category_id:12)%></li>
+                <li><%= link_to "パン類",category_refrige_foods_path(category_id:13)%></li>
+                <li><%= link_to "麺類",category_refrige_foods_path(category_id:14)%></li>
+                <li><%= link_to "その他",category_refrige_foods_path(category_id:15)%></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sort__search">
+          <ul class="sort_menu">
+            <li><a class="sort__btn">並び替え</a>
+              <ul>
+                <li><%= link_to "購入日 新しい" ,change_refrige_foods_path(change:"purchase_new")%></li>
+                <li><%= link_to "購入日 古い",change_refrige_foods_path(change:"purchase_old")%></li>
+                <li><%= link_to "賞味期限 近い",change_refrige_foods_path(change:"sell_old")%></li>
+                <li><%= link_to "賞味期限 遠い",change_refrige_foods_path(change:"sell_new")%></li>
+                <li><%= link_to "現在の在庫のみ",change_refrige_foods_path(change:"checked_false")%></li>
+                <li><%= link_to "消費済のみ",change_refrige_foods_path(change:"checked_true")%></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+
+       </div>
+     </div>
+
+
+
+
+
+
+
+      <div class="sabu_food">
+         <div class="food_scroll">
+               <table class="food_table">
+                 <tr>
+                  <th>食材名</th>
+                  <th>商品名</th>
+                  <th>カテゴリー</th>
+                  <th>購入日</th>
+                  <th>賞味期限</th>
+                  <th>購入店</th>
+                 </tr>
+                 <% @foods.each do |food| %>
+                 <tr class="foods" data-id=<%= food.id %> data-check=<%= food.checked %>>
+                    <td class="food_name" id="lists" > <%= food.food_name %></td>
+                    <td class="product_name" id="lists"><%= food.product_name %></td>
+                    <td class="category" id="lists"><%= food.category.name %></td>
+                    <td class="purchase_date" id="lists"><%= food.purchase_date %></td>
+                    <td class="sell_by" id="lists"><%= food.sell_by %></td>
+                    <td class="shop" id="lists"><%= food.shop %></td>
+                   </tr>
+                 <% end %>
+
+
+
+               </table>
+          </div>
+      </div>
+
+
+    </div>
+</div>
