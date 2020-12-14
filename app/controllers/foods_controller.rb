@@ -18,6 +18,20 @@ class FoodsController < ApplicationController
     end
   end
 
+  def edit
+    @food = Food.find(params[:id])
+  
+  end
+  def update
+    @food = Food.find(params[:id])
+    food.update(food_params)
+  end
+
+
+
+
+
+
   def checked
     food = Food.find(params[:id]) # これをこの後、以下の記述に書き換えてる
     if food.checked
@@ -46,10 +60,15 @@ class FoodsController < ApplicationController
     render :search
   end
 
+
   private
 
   def food_collection_params
     params.require(:form_food_collection)
-          .permit(foods_attributes: [:food_name, :product_name, :category_id, :purchase_date, :sell_by, :shop, :availability]).merge(refrige_id: params[:refrige_id])
+          .permit(foods_attributes: [:food_name, :product_name, :category_id, :purchase_date, :sell_by, :shop]).merge(refrige_id: params[:refrige_id])
+  end
+
+  def food_params
+    params.require(:food).permit(:food_name, :product_name, :category_id, :purchase_date, :sell_by, :shop).merge(refrige_id: params[:refrige_id])
   end
 end

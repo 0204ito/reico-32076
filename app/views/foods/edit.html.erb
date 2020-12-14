@@ -1,0 +1,107 @@
+<header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="left_bar">
+            <div class="nav__left">
+              <%= link_to image_tag("logo.png", class: :logo), root_path %>
+            </div>
+          </div>
+            <div class="right_bar">
+              <div class="menu__right"> 
+                <%= link_to  "my reico",  refrige_foods_path, class: :menu__btn %>
+              </div>
+              <div class="menu__right"> 
+                <%= link_to "検索", search_refrige_foods_path, class: :menu__btn %>
+              </div>
+            </div>
+        </div>
+      </div>
+</header>
+
+<div class="food-page">
+   <div class="new-food">
+     <p class="new-food-title">
+      ■食材を編集できます■
+     </p>
+     <p class="new-foodsub-title">
+      (※ 食材名、カテゴリー、購入日の入力は必須です)
+     </p>
+     <div class="food-spece">
+    <%= form_with model: @food, url: refrige_foods_path, method: :post, local: true do |f|%>
+    <table class="form-table">
+      <thead>
+        <tr>
+          <th>食材名 (必須)</th>
+          <th>商品名　</th>
+          <th>カテゴリー (必須)</th>
+          <th>購入日(必須)</th>
+          <th>賞味期限</th>
+          <th>購入店　</th>
+        </tr>
+      </thead>
+      <tbody class="bulk-registration-field">
+          <tr class="item">
+            <td>
+              <%= f.text_field :food_name, class: 'form-control'%>
+            </td>
+            <td>
+              <%= f.text_field :product_name, class: 'form-control'%>
+            </td>
+            <td>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:'form-control'}) %>
+            </td>
+            <td>
+              <%= f.date_field  :purchase_date, class: 'form-control'%>
+            </td>
+            <td>
+              <%= f.date_field :sell_by, class: 'form-control' %>
+            </td>
+            <td>
+              <%= f.text_field :shop, class: 'form-control'%>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="text-center">
+      <%= f.submit 'Up date', class: 'btn-btn-primary' %>
+    </div>
+  <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%# <div class="contents-row">
+  <div class="container">
+     <h2 class="new-sing">Food update</h2>
+     <p class="newreico-title">食材を編集できます</p>
+     <%= form_with model: @food,id: 'edit_food', class: 'edit_foo', local: true do |f| %> 
+        <%# <%= render 'shared/error_messages', model: f.object%>
+        <%#エラーメッセージを表示させる記述が必要%>
+        <%# <div class="form-group">
+          <div class="field">
+            <label class="form-text">My reico name</label>
+            <span class="indispensable">（必須）</span>
+          </div>
+          <%= f.text_area :refrige_name, class:"input-default", id:"refrige_name", placeholder:"例) ハナコreico", maxlength:"40" %>
+        <%# </div>
+
+        <div class="actions">
+          <%= f.submit "Up",class:"send" %>
+        <%# </div>
+     <% end %> 
+  <%# </div>
+</div> %> 

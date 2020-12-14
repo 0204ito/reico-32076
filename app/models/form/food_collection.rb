@@ -34,3 +34,11 @@ class Form::FoodCollection < Form::Base
     end
   end
 end
+
+ActiveRecord::Base.transaction do
+  @post = Post.new(name: params[:name],user_id: params[:user_id])
+  @event1 = @post.events.new(date: params[:event][:date1],name: params[:event][:event_name1],url: params[:event][:url1],post_id: @post.id)
+  if params[:event][:event_name2].present?
+    @event2 = @post.events.new(date: params[:event][:date2],name: params[:event][:event_name2],url: params[:event][:url2],post_id: @post.id)
+  end
+end
