@@ -10,12 +10,7 @@
 .in_index{
   width: 40%;
  display: block;
-
 }
-
-
-
-
 .refrige_right{
 padding-bottom: 10px;
 }
@@ -29,8 +24,6 @@ padding-bottom: 10px;
 .refrige_right a:hover {
   text-decoration: underline;
 }
-
-
 
 /* 表部分 */
 .sabu_index_food{
@@ -89,7 +82,6 @@ table th{
   width: 30%;
   font-size: 15px;
 }
-
 tr[data-check="true"] {
   text-decoration: line-through;
   color: #6acfe6;

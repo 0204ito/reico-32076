@@ -7,6 +7,12 @@ Rails.application.routes.draw do
       collection  do
        get 'search'
       end
+      collection  do
+        get 'category'
+       end
+       collection  do
+        get 'change'
+       end
     end
   end
   get 'foods/:id', to: 'foods#checked'#特定のfoodテーブルを指定するためにid
