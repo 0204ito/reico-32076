@@ -1,0 +1,33 @@
+
+.edit_actions{
+  margin-left:83.5% ;
+}
+
+
+.edit-btn-primary{
+  width: 200px;
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 3px;
+  color: white;
+  background-color: rgb(228, 154, 57);
+  display: block;
+  margin-top: 30px;
+}
+
+
+
+
+.food_delete{
+  width: 200px;
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 3px;
+  color: white;
+  background-color: rgb(228, 154, 57);
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 60px;
+}
