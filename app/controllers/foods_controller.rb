@@ -10,33 +10,36 @@ class FoodsController < ApplicationController
     @refrige = Refrige.find(params[:refrige_id])
   end
 
-  # def create
-  #   @food = Food.new(food_params)
-  #   if @food.save # これが偽にならないとrender :newは行われない
-  #     redirect_to refrige_foods_path
-  #   else
-  #     render :new
-  #   end
-  # end
-
   def create
-    # food = Food.create(food_name: params[:food_name],product_name: params[:product_name],category_id: params[:category_id],purchase_date: params[:purchase_date],sell_by: params[:sell_by],shop: params[:shop], checked: false)
-    food = Food.create(food_name: params[:food][:food_name],product_name: params[:food][:product_name],category_id: params[:food][:category_id],purchase_date: params[:food][:purchase_date],sell_by: params[:food][:sell_by],shop: params[:food][:shop], refrige_id: params[:refrige_id])
+    # (food_name: params[:food][:food_name],product_name: params[:food][:product_name],category_id: params[:food][:category_id],purchase_date: params[:food][:purchase_date],sell_by: params[:food][:sell_by],shop: params[:food][:shop], refrige_id: params[:refrige_id])
+    food = Food.new(food_params)
+    if food.valid?#バリデーションを通っていれば
+      food.save
+    end
     render json:{ food: food }
   end
 
   def edit
     @food = Food.find(params[:id])
-  
   end
+
   def update
     @food = Food.find(params[:id])
-    food.update(food_params)
+    if @food.update(food_params)
+    redirect_to search_refrige_foods_path
+    else
+      render :edit
+    end
   end
 
-
-
-
+  def destroy
+    @food = Food.find(params[:id])
+    if @food.destroy
+    redirect_to search_refrige_foods_path
+    else
+      render :edit
+    end
+  end
 
 
   def checked
@@ -69,11 +72,6 @@ class FoodsController < ApplicationController
 
 
   private
-
-  # def food_collection_params
-  #   params.require(:form_food_collection)
-  #         .permit(foods_attributes: [:food_name, :product_name, :category_id, :purchase_date, :sell_by, :shop]).merge(refrige_id: params[:refrige_id])
-  # end
 
   def food_params
     params.require(:food).permit(:food_name, :product_name, :category_id, :purchase_date, :sell_by, :shop).merge(refrige_id: params[:refrige_id])
