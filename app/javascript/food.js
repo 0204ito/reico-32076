@@ -19,37 +19,55 @@ function food() {
       }
       const item = XHR.response.food;
       const list = document.getElementById("list");
-      const formText = document.getElementById("food_name", "product_name","category_id","purchase_date","sell_by","shop");
+      const nameText = document.getElementById("food_name");
+      const productText = document.getElementById("product_name")
+      const categoryText = document.getElementById("category_id")
+      const purchaseText = document.getElementById("purchase_date")
+      const sellText = document.getElementById("sell_by")
+      const shopText = document.getElementById("shop")
+      // もしitemが存在しない場合→
+       if (item.id == null) {
+        alert(`食材名・カテゴリー・購入日 の記入をしてください`);
+        return null;
+      } else{
+      // ↓もしitemが存在する場合
       const HTML = `
-      
-      <tbody class="bulk-registration-field">
+
+      <table class="food_table">
           <tr class="item">
-             <td class="form-control">
-           ${item.food_name}
-         </td>
-         <td class="form-control">
-          ${item.product_name}
-         </td>
-         <td class="form-control">
-          ${item.category_id}
-         </td>
-         <td class="form-control">
-          ${item.purchase_date}
-         </td>
-         <td class="form-control">
-        ${item.sell_by}
-         </td>
-         <td class="form-control">
-         ${item.shop}
-         </td>
-          </tr>
-        
-      </tbody>`;
+             <td class="food_name">
+               ${item.food_name}
+             </td>
+             <td class="product_name">
+               ${item.product_name}
+             </td>
+             <td class="category_id">
+               ${item.category.name}
+             </td>
+             <td class="purchase_date">
+               ${item.purchase_date}
+             </td>
+             <td class="sell_by">
+               ${item.sell_by}
+             </td>
+             <td class="shop">
+               ${item.shop}
+            </td>
+           </tr>
+      </table>`;
+      
 
       list.insertAdjacentHTML("afterend", HTML);
-      formText.value = "";
+      nameText.value = "";
+      productText.value = "";
+      shopText.value = "";
+      purchaseText.value = null;
+      sellText.value = null;
+      categoryText.value = "1";
+     
     };
     e.preventDefault();
+   }
   });
 
 }

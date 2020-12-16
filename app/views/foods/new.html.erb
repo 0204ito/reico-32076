@@ -49,7 +49,7 @@
               <%= f.text_field :product_name, id: "product_name", class: 'form-control'%>
             </td>
             <td>
-              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:'form-control'}) %>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:'form-control', id:"category_id"}) %>
             </td>
             <td>
               <%= f.date_field  :purchase_date, id: "purchase_date", class: 'form-control'%>
@@ -67,10 +67,12 @@
     </div>
     <div class="text-center">
       <%# <%= form.submit '食材をまとめて追加', class: 'btn-btn-primary' %>
-      <%= f.submit '食材をまとめて追加', class: 'btn-btn-primary',id: "food_submit" %>
+      <%= f.submit '食材を追加', class: 'btn-btn-primary',id: "food_submit" %>
     </div>
   <% end %>
-<div id="list">
-</div>
+    <div class="java_food">
+      <div id="list">
+      </div>
+    </div>
   </div>
 </div>
