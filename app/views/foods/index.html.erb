@@ -65,12 +65,12 @@
                  </tr>
                 <% @foods.each do |food| %>
                  <tr class="food" data-id=<%= food.id %> data-check=<%= food.checked %>>
-                    <td class="food_name" id="lists" > <%= food.food_name %></td>
-                    <td class="product_name" id="lists"><%= food.product_name %></td>
-                    <td class="category" id="lists"><%= food.category.name %></td>
-                    <td class="purchase_date" id="lists"><%= food.purchase_date %></td>
-                    <td class="sell_by" id="lists"><%= food.sell_by %></td>
-                    <td class="shop" id="lists"><%= food.shop %></td>
+                    <td class="food_name" id="food" > <%= food.food_name %></td>
+                    <td class="product_name" id="food"><%= food.product_name %></td>
+                    <td class="category" id="food"><%= food.category.name %></td>
+                    <td class="purchase_date" id="food"><%= food.purchase_date %></td>
+                    <td class="sell_by" id="food"><%= food.sell_by %></td>
+                    <td class="shop" id="food"><%= food.shop %></td>
                  </tr>
                 <% end %>
               </table>
