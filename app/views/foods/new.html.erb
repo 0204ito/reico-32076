@@ -41,7 +41,7 @@
       </thead>
       <tbody class="bulk-registration-field">
          <%# <%= form.fields_for :foods do |f|%> 
-          <tr class="item" data-id=<%= @refrige.id%> id=new_food >
+          <tr class="item" data-id=<%= @refrige.id%> id=new_food  data-check=<%= @food.checked %>>
             <td>
               <%= f.text_field :food_name, id: "food_name", class: 'form-control'%>
             </td>
