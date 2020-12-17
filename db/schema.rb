@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_091642) do
     t.string "product_name"
     t.integer "category_id", null: false
     t.date "purchase_date", null: false
-    t.date "sell_by"
+    t.date "sell_by", null: false
     t.string "shop"
     t.bigint "refrige_id"
     t.boolean "checked"

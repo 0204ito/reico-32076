@@ -5,7 +5,7 @@ class CreateFoods < ActiveRecord::Migration[6.0]
       t.string :product_name
       t.integer :category_id,            null: false
       t.date :purchase_date,             null: false
-      t.date :sell_by
+      t.date :sell_by,                   null: false
       t.string :shop
       t.references :refrige,       foreign_key: true
       t.boolean :checked

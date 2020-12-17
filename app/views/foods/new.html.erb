@@ -21,10 +21,13 @@
       ■購入食材を冷蔵庫に追加しよう■
      </p>
      <p class="new-foodsub-title">
-      (※ 食材名、カテゴリー、購入日の入力は必須です)
+      (※ 食材名・カテゴリー・購入日・賞味期限 の入力は必須です)
      </p>
      <div class="food-spece">
-    <%= form_with model: @form, url: refrige_foods_path, method: :post, local: true do |form|%>
+    <%# <%= form_with model: @form, url: refrige_foods_path, method: :post, local: true do |form|%>
+    <%= form_with model: @food, url: refrige_foods_path, method: :post,id: "form" do |f|%>
+        <%# <%= render 'shared/error_messages', model: f.object%>
+        <%#エラーメッセージを表示させる記述が必要%>
     <table class="form-table">
       <thead>
         <tr>
@@ -32,39 +35,44 @@
           <th>商品名　</th>
           <th>カテゴリー (必須)</th>
           <th>購入日(必須)</th>
-          <th>賞味期限</th>
+          <th>賞味期限(必須)</th>
           <th>購入店　</th>
         </tr>
       </thead>
       <tbody class="bulk-registration-field">
-         <%= form.fields_for :foods do |f|%>
-          <tr class="item">
+         <%# <%= form.fields_for :foods do |f|%> 
+          <tr class="item" data-id=<%= @refrige.id%> id=new_food  data-check=<%= @food.checked %>>
             <td>
-              <%= f.text_field :food_name, class: 'form-control'%>
+              <%= f.text_field :food_name, id: "food_name", class: 'form-control'%>
             </td>
             <td>
-              <%= f.text_field :product_name, class: 'form-control'%>
+              <%= f.text_field :product_name, id: "product_name", class: 'form-control'%>
             </td>
             <td>
-              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:'form-control'}) %>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:'form-control', id:"category_id"}) %>
             </td>
             <td>
-              <%= f.date_field  :purchase_date, class: 'form-control'%>
+              <%= f.date_field  :purchase_date, id: "purchase_date", class: 'form-control'%>
             </td>
             <td>
-              <%= f.date_field :sell_by, class: 'form-control' %>
+              <%= f.date_field :sell_by, id: "sell_by", class: 'form-control' %>
             </td>
             <td>
-              <%= f.text_field :shop, class: 'form-control'%>
+              <%= f.text_field :shop, id: "shop", class: 'form-control'%>
             </td>
           </tr>
-        <% end %>
+        
       </tbody>
     </table>
     </div>
     <div class="text-center">
-      <%= form.submit '食材をまとめて追加', class: 'btn-btn-primary' %>
+      <%# <%= form.submit '食材をまとめて追加', class: 'btn-btn-primary' %>
+      <%= f.submit '食材を追加', class: 'btn-btn-primary',id: "food_submit" %>
     </div>
   <% end %>
+    <div class="java_food">
+      <div id="list">
+      </div>
+    </div>
   </div>
 </div>

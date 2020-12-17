@@ -18,19 +18,32 @@ class Form::FoodCollection < Form::Base
 
   def save
     # Food.transaction do
-    # foods.map do |food|
-    #   food.refrige_id = self.refrige_id
-    #   food.save if food.food_name
+    foods.map do |food|
+      food.refrige_id = self.refrige_id
+      food.save if food.food_name
+      end
+    # end
+
+    # Food.transaction do
+    #   foods.each do |food| # foodsを一つづつ確認
+    #     return if food.food_name.blank? # blank?空のオブジェクトを判定できる。food_nameが空だったら全て保存されなくなる
+
+    #     food.refrige_id = refrige_id
+    #     raise ActiveRecord::Rollback unless food.save # そうでなければ保存
     #   end
     # end
 
-    Food.transaction do
-      foods.each do |food| # foodsを一つづつ確認
-        return if food.food_name.blank? # blank?空のオブジェクトを判定できる。food_nameが空だったら全て保存されなくなる
 
-        food.refrige_id = refrige_id
-        raise ActiveRecord::Rollback unless food.save # そうでなければ保存
-      end
-    end
+
+
+
   end
 end
+
+# ActiveRecord::Base.transaction do
+#   @post = Post.new(name: params[:name],user_id: params[:user_id])
+#   @event1 = @post.events.new(date: params[:event][:date1],name: params[:event][:event_name1],url: params[:event][:url1],post_id: @post.id)
+#   if params[:event][:event_name2].present?
+#     @event2 = @post.events.new(date: params[:event][:date2],name: params[:event][:event_name2],url: params[:event][:url2],post_id: @post.id)
+#   end
+# end

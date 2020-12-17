@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "reicos#index"
   resources :users, only: [:edit, :update]
   resources :refriges, only: [ :index, :new, :create, :edit, :update, :destroy] do
-    resources :foods, only: [ :index, :new, :create] do
+    resources :foods, only: [ :index, :new, :create, :edit, :update, :destroy] do
       collection  do
        get 'search'
       end
