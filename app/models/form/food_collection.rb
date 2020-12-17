@@ -19,9 +19,9 @@ class Form::FoodCollection < Form::Base
   def save
     # Food.transaction do
     foods.map do |food|
-      food.refrige_id = self.refrige_id
+      food.refrige_id = refrige_id
       food.save if food.food_name
-      end
+    end
     # end
 
     # Food.transaction do
@@ -32,11 +32,6 @@ class Form::FoodCollection < Form::Base
     #     raise ActiveRecord::Rollback unless food.save # そうでなければ保存
     #   end
     # end
-
-
-
-
-
   end
 end
 

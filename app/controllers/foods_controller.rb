@@ -13,10 +13,8 @@ class FoodsController < ApplicationController
   def create
     # (food_name: params[:food][:food_name],product_name: params[:food][:product_name],category_id: params[:food][:category_id],purchase_date: params[:food][:purchase_date],sell_by: params[:food][:sell_by],shop: params[:food][:shop], refrige_id: params[:refrige_id])
     food = Food.new(food_params)
-    if food.valid?#バリデーションを通っていれば
-      food.save
-    end
-    render json:{ food: food }
+    food.save if food.valid? # バリデーションを通っていれば
+    render json: { food: food }
   end
 
   def edit
@@ -26,7 +24,7 @@ class FoodsController < ApplicationController
   def update
     @food = Food.find(params[:id])
     if @food.update(food_params)
-    redirect_to search_refrige_foods_path
+      redirect_to search_refrige_foods_path
     else
       render :edit
     end
@@ -35,12 +33,11 @@ class FoodsController < ApplicationController
   def destroy
     @food = Food.find(params[:id])
     if @food.destroy
-    redirect_to search_refrige_foods_path
+      redirect_to search_refrige_foods_path
     else
       render :edit
     end
   end
-
 
   def checked
     food = Food.find(params[:id]) # これをこの後、以下の記述に書き換えてる
@@ -70,10 +67,9 @@ class FoodsController < ApplicationController
     render :search
   end
 
-
   private
 
   def food_params
     params.require(:food).permit(:food_name, :product_name, :category_id, :purchase_date, :sell_by, :shop).merge(refrige_id: params[:refrige_id], checked: false)
-  end #画面上で入力してない値をパラメーターに含めたいときはmergeを使うchecked: false
+  end # 画面上で入力してない値をパラメーターに含めたいときはmergeを使うchecked: false
 end
