@@ -27,7 +27,7 @@ function food() {
       const shopText = document.getElementById("shop")
         // もしitemが存在しない場合→
         if (item.id == null) {
-          alert(`食材名・カテゴリー・購入日 の記入をしてください`);
+          alert(`食材名・カテゴリー・購入日・賞味期限 の記入をしてください`);
           return null;
           }else{
           // ↓もしitemが存在する場合

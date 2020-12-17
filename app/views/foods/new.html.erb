@@ -21,7 +21,7 @@
       ■購入食材を冷蔵庫に追加しよう■
      </p>
      <p class="new-foodsub-title">
-      (※ 食材名、カテゴリー、購入日の入力は必須です)
+      (※ 食材名・カテゴリー・購入日・賞味期限 の入力は必須です)
      </p>
      <div class="food-spece">
     <%# <%= form_with model: @form, url: refrige_foods_path, method: :post, local: true do |form|%>
@@ -35,7 +35,7 @@
           <th>商品名　</th>
           <th>カテゴリー (必須)</th>
           <th>購入日(必須)</th>
-          <th>賞味期限</th>
+          <th>賞味期限(必須)</th>
           <th>購入店　</th>
         </tr>
       </thead>

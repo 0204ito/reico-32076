@@ -6,6 +6,7 @@ class Food < ApplicationRecord
   with_options presence: true do
     validates :food_name
     validates :purchase_date
+    validates :sell_by
     validates :refrige_id
   end
   validates :category_id, numericality: { other_than: 1 }
