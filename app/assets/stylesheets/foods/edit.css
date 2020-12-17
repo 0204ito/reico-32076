@@ -16,8 +16,6 @@
 }
 
 
-
-
 .food_delete{
   width: 200px;
   padding: 15px;
@@ -30,4 +28,15 @@
   text-align: center;
   text-decoration: none;
   padding: 10px 60px;
+}
+
+/* .edit_btn{
+  background-color: #97e4f5;
+  border: 1px solid white;
+} */
+.edit_btn a {
+  color: rgb(241, 157, 157);
+  text-decoration: none;
+}
+  text-decoration: underline;
 }
