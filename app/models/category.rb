@@ -14,7 +14,10 @@ class Category < ActiveHash::Base
     { id: 12, name: 'ご飯類' },
     { id: 13, name: 'パン類' },
     { id: 14, name: '麺類' },
-    { id: 15, name: 'その他' }
+    { id: 15, name: '調味料' },
+    { id: 16, name: '乳飲料' },
+    { id: 17, name: 'お菓子' },
+    { id: 18, name: 'その他' },
   ]
 
   include ActiveHash::Associations # 記述してmoduleを取り込む
