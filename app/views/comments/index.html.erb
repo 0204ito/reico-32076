@@ -1,0 +1,66 @@
+<header class="header">
+    <div class="inner">
+      <div class="nav">
+        <div class="left_bar">
+          <div class="nav__left">
+            <%= link_to image_tag("logo.png", class: :logo), root_path %>
+          </div>
+        </div>
+        <div class="right_bar">
+          <div class="menu__right"> 
+             <%= link_to "食材追加", new_refrige_food_path, class: :menu__btn %>
+          </div> 
+          <div class="menu__right"> 
+             <%= link_to "検索・編集", search_refrige_foods_path, class: :menu__btn %>
+          </div>
+          <div class="menu__right"> 
+             <%= link_to "my reico",  refrige_foods_path, class: :menu__btn %>
+          </div> 
+        </div>
+      </div>
+    </div>
+</header>
+<div class="food-page">
+  <div class="index-comment">
+
+    <div class="comment_title">
+      <div class="refrige_comment">
+        <%= link_to @refrige.refrige_name, edit_refrige_path(@refrige.id) %>
+      </div>
+      <p class="text_comment">
+        ■ 同じreicoを共有している仲間とチャットしよう ■
+      </p>
+    </div>
+
+    <div class="comment_form">
+      <%= form_with(model: [@refrige, @comment], local: true) do |f| %>
+          <%= f.text_field :text , class: "comment_in", id:"comment_in", placeholder:"コメントを入力してください" %>
+          <%= f.submit "送信する", class: "comment__btn", id:"comment__btn" %>
+      <% end %> 
+    </div>
+
+    <div class="comment_field">
+      <ul class="comments_lists">
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+            <li class="comments_list">
+              <div class="comment_up">
+                <div class="comment_user">
+                  <%= comment.user.nickname %>
+                </div>
+                <div class="comment_date">
+                  <%= comment.created_at.strftime("%Y-%m-%d %H:%M") %>
+                </div>
+              </div>
+              <div class="comment_text">
+                <%= comment.text %>
+              </div>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+
+  </div>
+</div>
+

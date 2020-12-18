@@ -1,0 +1,99 @@
+/* .food-page{
+  display: flex;
+  background-image: url("<%= asset_path('cook1.png') %>");
+  background-size: cover;
+  width: 100%;
+} */
+.index-comment{
+  height: 100vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 26px 0;
+}
+/* ↓文字表示部分 */
+.comment_title{
+  display:flex;
+  padding-bottom:2px ;
+}
+.refrige_comment a {
+  color: #b8e9f8;
+  font-size: 25px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  font-size: 25px;
+  position: relative;
+  text-decoration: none;
+}
+.refrige_comment a:hover {
+  text-decoration: underline;
+}
+.text_comment{
+  color: rgb(250, 244, 244);
+  font-size: 18px;
+  margin: 12px 0 0 30px ;
+}
+/* ↑文字表示部分 */
+/* ↓入力フォーム部分 */
+.comment_form{
+  margin:50px 30px 20px 0 ;
+  display:flex;
+  justify-content: flex-end;
+}
+.comment_in{
+  width: 800px;
+  height: 50px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px white;
+}
+.comment__btn{
+  width: 100px;
+  border: 1px solid #81c9f7;
+  border-radius: 5px;
+  color: #81c9f7;
+  background: #e4faff;
+  padding: 12px;
+  margin-left: 15px ;
+}
+.comment__btn:hover{
+  color: #fff;
+  background: #ffbbd8;
+  border: 1px solid #ffbbd8;
+}
+/* ↑入力フォーム部分 */
+/* ↓コメント一覧部分 */
+.comment_field{
+  width: calc(100vw - 220px);
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  overflow: scroll;
+  height: calc(100vh - 250px);
+}
+.comments_list{
+ margin-bottom: 20px;
+}
+.comment_up{
+  display: flex;
+}
+.comment_user{
+  color: rgb(160, 85, 85);
+  font-size: 15px;
+}
+.comment_date{
+  color: rgb(83, 70, 70);
+  font-size: 12px;
+  margin: 3px 0 0 10px;
+}
+.comment_text{
+  font-size: 18px;
+  color: rgb(83, 70, 70);
+}
+
+
+
+
+/* .comment_form{
+
+} */
