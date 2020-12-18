@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  get 'comments/index'
   devise_for :users, controllers: {registrations: 'users/registrations'}
   root to: "reicos#index"
   resources :users, only: [:edit, :update]
   resources :refriges, only: [ :index, :new, :create, :edit, :update, :destroy] do
-    resources :foods, only: [ :index, :new, :create, :edit, :update, :destroy] do
+    resources :foods,:comments, only: [ :index, :new, :create, :edit, :update, :destroy] do
       collection  do
        get 'search'
       end
