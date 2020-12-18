@@ -1,13 +1,16 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
+  # before_action :move_to_index, except: :index
+  before_action :set_food, only: [:edit, :update, :destroy]
+  before_action :set_refrige, only: [:index, :new, :search, :category, :change]
+ 
+
   def index
-    @refrige = Refrige.find(params[:refrige_id])
     @foods = @refrige.foods.all.order(id: 'DESC')
   end
 
   def new
     @food = Food.new
-    @refrige = Refrige.find(params[:refrige_id])
   end
 
   def create
@@ -18,11 +21,9 @@ class FoodsController < ApplicationController
   end
 
   def edit
-    @food = Food.find(params[:id])
   end
 
   def update
-    @food = Food.find(params[:id])
     if @food.update(food_params)
       redirect_to search_refrige_foods_path
     else
@@ -31,7 +32,6 @@ class FoodsController < ApplicationController
   end
 
   def destroy
-    @food = Food.find(params[:id])
     if @food.destroy
       redirect_to search_refrige_foods_path
     else
@@ -51,18 +51,15 @@ class FoodsController < ApplicationController
   end
 
   def search
-    @refrige = Refrige.find(params[:refrige_id])
     @foods = @refrige.foods.search(params[:keyword]).order(id: 'DESC')
   end
 
   def category
-    @refrige = Refrige.find(params[:refrige_id])
     @foods = @refrige.foods.where(category_id: params[:category_id]).order(id: 'DESC')
     render :search
   end
 
   def change
-    @refrige = Refrige.find(params[:refrige_id])
     @foods = @refrige.foods.change(params[:change])
     render :search
   end
@@ -72,4 +69,19 @@ class FoodsController < ApplicationController
   def food_params
     params.require(:food).permit(:food_name, :product_name, :category_id, :purchase_date, :sell_by, :shop).merge(refrige_id: params[:refrige_id], checked: false)
   end # 画面上で入力してない値をパラメーターに含めたいときはmergeを使うchecked: false
+  
+  def set_item
+    @food = Food.find(params[:id])
+  end
+
+  def set_refrige
+    @refrige = Refrige.find(params[:refrige_id])
+  end
+
+  # def move_to_index
+  #   unless current_user.id == @refrige.user_ids
+  #    redirect_to root_path
+  #   end
+  #  end
+
 end
