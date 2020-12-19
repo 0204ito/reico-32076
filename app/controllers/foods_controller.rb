@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
-  # before_action :move_to_index, except: :index
+  # before_action :move_to_index
   before_action :set_food, only: [:edit, :update, :destroy]
   before_action :set_refrige, only: [:index, :new, :search, :category, :change]
  
@@ -79,7 +79,7 @@ class FoodsController < ApplicationController
   end
 
   # def move_to_index
-  #   unless current_user.id == @refrige.user_ids
+  #   unless (current_user.id).include? @refrige.user_ids
   #    redirect_to root_path
   #   end
   #  end
