@@ -69,7 +69,7 @@ class FoodsController < ApplicationController
     params.require(:food).permit(:food_name, :product_name, :category_id, :purchase_date, :sell_by, :shop).merge(refrige_id: params[:refrige_id], checked: false)
   end # 画面上で入力してない値をパラメーターに含めたいときはmergeを使うchecked: false
 
-  def set_item
+  def set_food
     @food = Food.find(params[:id])
   end
 
