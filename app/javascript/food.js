@@ -3,7 +3,6 @@ function food() {
   const newFood = document.getElementById("new_food");
 
     submit.addEventListener("click", (e) => {
-      
     const refrigeId = newFood.getAttribute("data-id")
     const formData = new FormData(document.getElementById("form"));// メモ投稿のフォームに入力された情報をidで取得
     const XHR = new XMLHttpRequest();
