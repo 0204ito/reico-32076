@@ -1,0 +1,12 @@
+<ul class="sort_menu">
+  <li><a class="sort__btn">並び替え</a>
+    <ul>
+      <li><%= link_to "購入日 新しい" ,change_refrige_foods_path(change:"purchase_new")%></li>
+      <li><%= link_to "購入日 古い",change_refrige_foods_path(change:"purchase_old")%></li>
+      <li><%= link_to "賞味期限 近い",change_refrige_foods_path(change:"sell_old")%></li>
+      <li><%= link_to "賞味期限 遠い",change_refrige_foods_path(change:"sell_new")%></li>
+      <li><%= link_to "現在の在庫のみ",change_refrige_foods_path(change:"checked_false")%></li>
+      <li><%= link_to "消費済のみ",change_refrige_foods_path(change:"checked_true")%></li>
+    </ul>
+  </li>
+</ul>

@@ -2,7 +2,6 @@
   background-color:  #e4faff;
   margin-bottom: 20px;
   padding: 20px 0;
-
 }
 .inner {
   margin: 0 auto;
@@ -14,28 +13,20 @@
   justify-content: space-between;
   align-items: center;
 }
-
-
 .left_bar{
   display: flex;
   justify-content: flex-start;
   padding-left: 35vh ;
 }
-
 .logo {
   width: 200px;
   margin-right: 40px;
 }
-
-
-
 .right_bar{
   display: flex;
   justify-content: flex-end;
   padding-right: 35vh;
 }
-
-
 .nav__btn{
   display: inline-block;
   padding: 1.2em 2.6em;

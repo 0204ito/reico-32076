@@ -21,55 +21,55 @@
 <div class="food-page">
    <div class="new-food">
      <p class="new-food-title">
-      ■食材を編集・削除できます■
+       ■食材を編集・削除できます■
      </p>
      <p class="new-foodsub-title">
-      (※ 食材名、カテゴリー、購入日の入力は必須です)
+       (※ 食材名、カテゴリー、購入日の入力は必須です)
      </p>
      <%= render 'shared/error_messages', model: @food%>
      <%#エラーメッセージを表示させる記述が必要%>
      <div class="food-spece">
-    <%= form_with model: @food, url: refrige_food_path, local: true do |f|%>
-    <table class="form-table">
-      <thead>
-        <tr>
-          <th>食材名 (必須)</th>
-          <th>商品名　</th>
-          <th>カテゴリー (必須)</th>
-          <th>購入日(必須)</th>
-          <th>賞味期限</th>
-          <th>購入店　</th>
-        </tr>
-      </thead>
-      <tbody class="bulk-registration-field">
-          <tr class="item">
-            <td>
-              <%= f.text_field :food_name, class: 'form-control'%>
-            </td>
-            <td>
-              <%= f.text_field :product_name, class: 'form-control'%>
-            </td>
-            <td>
-              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:'form-control'}) %>
-            </td>
-            <td>
-              <%= f.date_field  :purchase_date, class: 'form-control'%>
-            </td>
-            <td>
-              <%= f.date_field :sell_by, class: 'form-control' %>
-            </td>
-            <td>
-              <%= f.text_field :shop, class: 'form-control'%>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-    </div>
+        <%= form_with model: @food, url: refrige_food_path, local: true do |f|%>
+        <table class="form-table">
+          <thead>
+            <tr>
+              <th>食材名 (必須)</th>
+              <th>商品名　</th>
+              <th>カテゴリー (必須)</th>
+              <th>購入日(必須)</th>
+              <th>賞味期限</th>
+              <th>購入店　</th>
+           </tr>
+          </thead>
+          <tbody class="bulk-registration-field">
+            <tr class="item">
+              <td>
+                <%= f.text_field :food_name, class: 'form-control'%>
+              </td>
+              <td>
+                <%= f.text_field :product_name, class: 'form-control'%>
+              </td>
+              <td>
+                <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:'form-control'}) %>
+              </td>
+              <td>
+                <%= f.date_field  :purchase_date, class: 'form-control'%>
+              </td>
+              <td>
+                <%= f.date_field :sell_by, class: 'form-control' %>
+              </td>
+              <td>
+                <%= f.text_field :shop, class: 'form-control'%>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     <div class="edit_actions">
       <%= f.submit 'Up date', class: 'edit-btn-primary' %>
       <%= link_to "Delete", refrige_food_path, method: :delete, class:"food_delete" %>
     </div>
-  <% end %>
+      <% end %>
   </div>
 </div>
 

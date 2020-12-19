@@ -1,9 +1,4 @@
-/* .food-page{
-  display: flex;
-  background-image: url("<%= asset_path('cook1.png') %>");
-  background-size: cover;
-  width: 100%;
-} */
+
 .index-comment{
   height: 100vh;
   display: block;
@@ -49,7 +44,7 @@
 }
 .comment__btn{
   width: 100px;
-  border: 1px solid #81c9f7;
+  border: 1px solid #e4faff;
   border-radius: 5px;
   color: #81c9f7;
   background: #e4faff;

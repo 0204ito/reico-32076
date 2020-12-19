@@ -18,27 +18,26 @@
 <div class="food-page">
    <div class="new-food">
      <p class="new-food-title">
-      ■購入食材を冷蔵庫に追加しよう■
+       ■購入食材を冷蔵庫に追加しよう■
      </p>
      <p class="new-foodsub-title">
-      (※ 食材名・カテゴリー・購入日・賞味期限 の入力は必須です)
+       (※ 食材名・カテゴリー・購入日・賞味期限 の入力は必須です)
      </p>
-     <div class="food-spece">
-    <%# <%= form_with model: @form, url: refrige_foods_path, method: :post, local: true do |form|%>
-    <%= form_with model: [@refrige, @food], url: refrige_foods_path, method: :post,id: "form" do |f|%>
+     <div  class="food-spece">
+       <%= form_with model: [@refrige, @food], url: refrige_foods_path, method: :post,id: "form" do |f|%>
         <%#エラーメッセージを表示させる記述が必要 Ajaxなのでアラートでエラーメッセージ表示%>
-    <table class="form-table">
-      <thead>
-        <tr>
-          <th>食材名 (必須)</th>
-          <th>商品名　</th>
-          <th>カテゴリー (必須)</th>
-          <th>購入日(必須)</th>
-          <th>賞味期限(必須)</th>
-          <th>購入店　</th>
-        </tr>
-      </thead>
-      <tbody class="bulk-registration-field">
+       <table class="form-table">
+         <thead>
+           <tr>
+             <th>食材名 (必須)</th>
+             <th>商品名　</th>
+             <th>カテゴリー (必須)</th>
+             <th>購入日(必須)</th>
+             <th>賞味期限(必須)</th>
+             <th>購入店　</th>
+           </tr>
+         </thead>
+        <tbody class="bulk-registration-field">
           <tr class="item" data-id=<%= @refrige.id%> id=new_food  data-check=<%= @food.checked %>>
             <td>
               <%= f.text_field :food_name, id: "food_name", class: 'form-control'%>
@@ -63,7 +62,6 @@
     </table>
     </div>
     <div class="text-center">
-      <%# <%= form.submit '食材をまとめて追加', class: 'btn-btn-primary' %>
       <%= f.submit '食材を追加', class: 'btn-btn-primary',id: "food_submit" %>
     </div>
   <% end %>

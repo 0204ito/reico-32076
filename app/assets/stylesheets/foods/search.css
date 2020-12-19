@@ -5,11 +5,11 @@
   width: 100%;
   padding-right: 35vh;
 }
-.menu__search{
+  .menu__search{
   padding: 10px 30px;
 }
 /* 検索フォーム */
-.search-form {
+  .search-form {
   text-align: center;
   display:flex
 }

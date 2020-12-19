@@ -54,30 +54,28 @@
           </div>
       </div>
       <div class="sabu_index_food">
-         <div class="index_scroll">
-             <table class="food_table">
-                  <th>食材名</th>
-                  <th>商品名</th>
-                  <th>カテゴリー</th>
-                  <th>購入日</th>
-                  <th>賞味期限</th>
-                  <th>購入店</th>
-                 </tr>
-                <% @foods.each do |food| %>
-                 <tr class="food" data-id=<%= food.id %> data-check=<%= food.checked %>>
-                    <td class="food_name" id="food" > <%= food.food_name %></td>
-                    <td class="product_name" id="food"><%= food.product_name %></td>
-                    <td class="category" id="food"><%= food.category.name %></td>
-                    <td class="purchase_date" id="food"><%= food.purchase_date %></td>
-                    <td class="sell_by" id="food"><%= food.sell_by %></td>
-                    <td class="shop" id="food"><%= food.shop %></td>
-                 </tr>
-                <% end %>
-              </table>
-              </div>
+        <div class="index_scroll">
+          <table class="food_table">
+            <th>食材名</th>
+            <th>商品名</th>
+            <th>カテゴリー</th>
+            <th>購入日</th>
+            <th>賞味期限</th>
+            <th>購入店</th>
+              <% @foods.each do |food| %>
+                <tr class="food" data-id=<%= food.id %> data-check=<%= food.checked %>>
+                  <td class="food_name" id="food" > <%= food.food_name %></td>
+                  <td class="product_name" id="food"><%= food.product_name %></td>
+                  <td class="category" id="food"><%= food.category.name %></td>
+                  <td class="purchase_date" id="food"><%= food.purchase_date %></td>
+                  <td class="sell_by" id="food"><%= food.sell_by %></td>
+                  <td class="shop" id="food"><%= food.shop %></td>
+                </tr>
+              <% end %>
+          </table>
+        </div>
       </div>
-      
-     <%# <%= ここまで食材一覧 %> 
+      <%# <%= ここまで食材一覧 %> 
     </div>
   </div>
 </div>
