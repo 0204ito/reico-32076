@@ -4,12 +4,12 @@ class CommentsController < ApplicationController
 
   def index
     @comment = Comment.new
-    @comments = @refrige.comments.includes(:user).all.order(id: "DESC")
+    @comments = @refrige.comments.includes(:user).all.order(id: 'DESC')
   end
 
   def create
     @comment = Comment.new(comment_params)
-    if  @comment.save
+    if @comment.save
       redirect_to refrige_comments_path
     else
       redirect_to refrige_comments_path
@@ -17,6 +17,7 @@ class CommentsController < ApplicationController
   end
 
   private
+
   def comment_params
     params.require(:comment).permit(:text).merge(user_id: current_user.id, refrige_id: params[:refrige_id])
   end

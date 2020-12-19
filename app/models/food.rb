@@ -8,11 +8,10 @@ class Food < ApplicationRecord
     validates :sell_by
     validates :refrige_id
   end
-  validates :category_id, numericality: { other_than: 1 }# ジャンルの選択が「--」の時は保存できないようにする
+  validates :category_id, numericality: { other_than: 1 } # ジャンルの選択が「--」の時は保存できないようにする
   validates :checked, inclusion: { in: [true, false] }
 
   belongs_to :refrige, validate: false
-
 
   def self.search(search)
     # クラス全体に検索をかけたいから、クラス全体で使えるクラスメソッドを使う

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Food, type: :model do
   before do
-    @refrige = FactoryBot.create(:refrige) 
+    @refrige = FactoryBot.create(:refrige)
     @food = FactoryBot.build(:food, refrige_id: @refrige.id)
   end
   describe '食材の登録' do
@@ -23,8 +23,6 @@ RSpec.describe Food, type: :model do
         expect(@food.errors.full_messages).to include('Category must be other than 1')
       end
 
-
-
       it 'purchase_dateが空だと登録できない' do
         @food.purchase_date = ''
         @food.valid?
@@ -35,8 +33,6 @@ RSpec.describe Food, type: :model do
         @food.valid?
         expect(@food.errors.full_messages).to include("Sell by can't be blank")
       end
-  
     end
   end
-  
 end

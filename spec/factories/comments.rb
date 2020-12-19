@@ -4,5 +4,4 @@ FactoryBot.define do
     association :user
     association :refrige
   end
-  
 end

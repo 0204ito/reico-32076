@@ -3,7 +3,6 @@ class FoodsController < ApplicationController
   # before_action :move_to_index
   before_action :set_food, only: [:edit, :update, :destroy]
   before_action :set_refrige, only: [:index, :new, :search, :category, :change]
- 
 
   def index
     @foods = @refrige.foods.all.order(id: 'DESC')
@@ -69,7 +68,7 @@ class FoodsController < ApplicationController
   def food_params
     params.require(:food).permit(:food_name, :product_name, :category_id, :purchase_date, :sell_by, :shop).merge(refrige_id: params[:refrige_id], checked: false)
   end # 画面上で入力してない値をパラメーターに含めたいときはmergeを使うchecked: false
-  
+
   def set_item
     @food = Food.find(params[:id])
   end
@@ -83,5 +82,4 @@ class FoodsController < ApplicationController
   #    redirect_to root_path
   #   end
   #  end
-
 end
