@@ -18,7 +18,7 @@ class RefrigesController < ApplicationController
   end
 
   def edit
-    redirect_to action: :index unless current_user.id && @refrige.user_ids
+    redirect_to action: :index unless @refrige.user_ids.include? current_user.id
   end
 
   def update
@@ -31,7 +31,7 @@ class RefrigesController < ApplicationController
 
   def destroy
     redirect_to refriges_path if @refrige.destroy
-    redirect_to action: :index unless current_user.id && @refrige.user_ids
+    redirect_to action: :index unless @refrige.user_ids.include? current_user.id
   end
 
   private
@@ -43,4 +43,6 @@ class RefrigesController < ApplicationController
   def set_refrige
     @refrige = Refrige.find(params[:id])
   end
+
 end
+  

@@ -1,15 +1,20 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
-  # before_action :move_to_index
   before_action :set_food, only: [:edit, :update, :destroy]
   before_action :set_refrige, only: [:index, :new, :search, :category, :change]
 
   def index
     @foods = @refrige.foods.all.order(id: 'DESC')
+    unless @refrige.user_ids.include? current_user.id
+      redirect_to root_path
+    end
   end
 
   def new
     @food = Food.new
+    unless @refrige.user_ids.include? current_user.id
+      redirect_to root_path
+    end
   end
 
   def create
@@ -51,6 +56,9 @@ class FoodsController < ApplicationController
 
   def search
     @foods = @refrige.foods.search(params[:keyword]).order(id: 'DESC')
+    unless @refrige.user_ids.include? current_user.id
+      redirect_to root_path
+    end
   end
 
   def category
@@ -77,9 +85,4 @@ class FoodsController < ApplicationController
     @refrige = Refrige.find(params[:refrige_id])
   end
 
-  # def move_to_index
-  #   unless (current_user.id).include? @refrige.user_ids
-  #    redirect_to root_path
-  #   end
-  #  end
 end
