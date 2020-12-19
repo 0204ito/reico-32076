@@ -43,6 +43,4 @@ class RefrigesController < ApplicationController
   def set_refrige
     @refrige = Refrige.find(params[:id])
   end
-
 end
-  

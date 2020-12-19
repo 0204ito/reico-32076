@@ -5,16 +5,12 @@ class FoodsController < ApplicationController
 
   def index
     @foods = @refrige.foods.all.order(id: 'DESC')
-    unless @refrige.user_ids.include? current_user.id
-      redirect_to root_path
-    end
+    redirect_to root_path unless @refrige.user_ids.include? current_user.id
   end
 
   def new
     @food = Food.new
-    unless @refrige.user_ids.include? current_user.id
-      redirect_to root_path
-    end
+    redirect_to root_path unless @refrige.user_ids.include? current_user.id
   end
 
   def create
@@ -56,9 +52,7 @@ class FoodsController < ApplicationController
 
   def search
     @foods = @refrige.foods.search(params[:keyword]).order(id: 'DESC')
-    unless @refrige.user_ids.include? current_user.id
-      redirect_to root_path
-    end
+    redirect_to root_path unless @refrige.user_ids.include? current_user.id
   end
 
   def category
@@ -84,5 +78,4 @@ class FoodsController < ApplicationController
   def set_refrige
     @refrige = Refrige.find(params[:refrige_id])
   end
-
 end

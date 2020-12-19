@@ -5,7 +5,6 @@ class CommentsController < ApplicationController
   def index
     @comment = Comment.new
     @comments = @refrige.comments.includes(:user).all.order(id: 'DESC')
-    
   end
 
   def create
@@ -27,9 +26,7 @@ class CommentsController < ApplicationController
     @refrige = Refrige.find(params[:refrige_id])
   end
 
-   def move_to_index
-    unless @refrige.user_ids.include? current_user.id
-      redirect_to root_path
-    end
-   end
+  def move_to_index
+    redirect_to root_path unless @refrige.user_ids.include? current_user.id
+  end
 end
