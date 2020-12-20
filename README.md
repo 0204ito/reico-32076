@@ -102,7 +102,6 @@ ___
 ___
 ## DB 
 
-・・・・・・・・・・・・・・・・・・・・・・・・・・・・
 ### 〔 users テーブル 〕
 
 |        Column      |  Type  | Options      |
@@ -110,14 +109,13 @@ ___
 |       nickname     | string | unique: true |
 |        email       | string | unique: true |
 | encrypted_password | string | unique: true |
-| 
 
 ### Association
 <dt>has_many : refriges , through: :refriges_users</dt>
 <dt>has_many : refriges_users</dt>
 <dt>has_one : comments</dt>
 
-・・・・・・・・・・・・・・・・・・・・・・・・・・・・
+
 
 ### 〔 refriges_users テーブル 〕
 
@@ -125,25 +123,23 @@ ___
 | ------ | ---------- | ------------------------------ |
 |  user  | references | null: false, foreign_key: true |
 |refrige | references | null: false, foreign_key: true |
-|
+
 ### Association
 <dt>belongs_to :refrige</dt>
 <dt>belongs_to :user</dt>
 
-・・・・・・・・・・・・・・・・・・・・・・・・・・・・
 ### 〔 refriges テーブル 〕
 
 |       Column     |   Type   | Options      |
 | ---------------- | -------- | ------------ |
 |   refrige_name   |  string  | unique: true |
-|
 
 ### Association
 <dt>has_many :users, through: :refrige_users</dt>
 <dt>has_many :refrige_users</dt>
 <dt>has_many :foods</dt>
 <dt>has_many :comments</dt>
-・・・・・・・・・・・・・・・・・・・・・・・・・・・・
+
 
 ### 〔 foods テーブル 〕
 
@@ -157,11 +153,10 @@ ___
 |     shop    |   string   |                                |
 |   checked   |   boolean  |                                |
 |   refrige   | references | null: false, foreign_key: true |
-|
 
 ### Association
 <dt>belongs_to :refrige</dt>
-・・・・・・・・・・・・・・・・・・・・・・・・・・・・
+
 
 ### 〔 comments テーブル 〕
 
@@ -175,4 +170,3 @@ ___
 ### Association
 <dt>belongs_to :user</dt>
 <dt>belongs_to :refriges</dt>
-・・・・・・・・・・・・・・・・・・・・・・・・・・・・
