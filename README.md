@@ -75,15 +75,15 @@ ___
 ## Requirement
 バックエンド : Ruby , Ruby on Rails
 
-フロントエンド : HTML , CSS , JavaScript ,Ajax
+フロントエンド : HTML , CSS , JavaScript , Ajax
 
 データベース : MySQL
 
-インフラ :
+インフラ : AWS(EC2) , Capistrano
 
-Webサーバー(本番環境) :
+Webサーバー(本番環境) : Nginx
 
-アプリケーションサーバー :
+アプリケーションサーバー : Unicorn
 
 ソース管理 : GitHub , GitHub Desktop
 
