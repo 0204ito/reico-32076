@@ -25,11 +25,6 @@ RSpec.describe Refrige, type: :model do
         another_refrige.valid?
         expect(another_refrige.errors.full_messages).to include('Refrige name has already been taken')
       end
-      # it 'userが紐付いていないと保存できないこと' do
-      #   @refrige.user = nil
-      #   @refrige.valid?
-      #   expect(@refrige.errors.full_messages).to include('User must exist')
-      # end
     end
   end
 end
