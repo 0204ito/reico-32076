@@ -51,15 +51,16 @@
 .sabu-search-title{
   color: white;
   font-size: 20px;
-  margin: 10px 0 10px 20px;
+  margin: 10px 0 10px 30px;
 }
 .sub_search{
   display: flex;
+  margin-top: 35px;
 }
 
 /* ↓カテゴリ検索プルダウンメニュー */
 .category_menu{
-  margin-left: 380px;
+  margin-left: 370px;
   list-style-type: none;
   width: 120px;
   height: 40px;
