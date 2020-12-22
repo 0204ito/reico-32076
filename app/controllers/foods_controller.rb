@@ -16,8 +16,11 @@ class FoodsController < ApplicationController
   def create
     # (food_name: params[:food][:food_name],product_name: params[:food][:product_name],category_id: params[:food][:category_id],purchase_date: params[:food][:purchase_date],sell_by: params[:food][:sell_by],shop: params[:food][:shop], refrige_id: params[:refrige_id])
     food = Food.new(food_params)
-    food.save if food.valid? # バリデーションを通っていれば
-    render json: { food: food }
+    if food.valid? # バリデーションを通っていれば
+      category = Category.find(food.category_id)
+      food.save
+    end
+    render json: { food: food, category: category }
   end
 
   def edit
