@@ -1,6 +1,7 @@
 function food() {
   const submit = document.getElementById("food_submit");
   const newFood = document.getElementById("new_food");
+  const newCategory = document.getElementById("new_food");
 
   submit.addEventListener("click", (e) => {
     const refrigeId = newFood.getAttribute("data-id")
@@ -17,6 +18,8 @@ function food() {
         return null;
       }
       const item = XHR.response.food;
+      const category = XHR.response.category;
+      console.log(category);
       const list = document.getElementById("list");
       const nameText = document.getElementById("food_name");
       const productText = document.getElementById("product_name")
@@ -32,28 +35,28 @@ function food() {
           // ↓もしitemが存在する場合
           const HTML = `
 
-           <table class="food_table">
-             <tr class="item">
-               <td class="food_name">
-                 ${item.food_name}
-               </td>
-               <td class="product_name">
-                 ${item.product_name}
-               </td>
-               <td class="category_id">
-                 ${item.category_id}
-               </td>
-               <td class="purchase_date">
-                 ${item.purchase_date}
-               </td>
-               <td class="sell_by">
-                 ${item.sell_by}
-               </td>
-               <td class="shop">
-                 ${item.shop}
-               </td>
-             </tr>
-           </table>`;
+           <div class="food_table">
+             <div class="item_js">
+               <div class="food_name_js">
+               <a> ${item.food_name}</a>
+               </div>
+               <div class="product_name_js">
+               <a>${item.product_name}</a>
+               </div>
+               <div class="category_id_js">
+               <a>${category.attributes.name}</a>
+               </div>
+               <div class="purchase_date_js">
+               <a>${item.purchase_date}</a>
+               </div>
+               <div class="sell_by_js">
+               <a>${item.sell_by}</a>
+               </div>
+               <div class="shop_js">
+               <a>${item.shop}</a>
+               </div>
+             </div>
+           </div>`;
            list.insertAdjacentHTML("afterend", HTML);
            nameText.value = "";
            productText.value = "";

@@ -21,6 +21,6 @@ class Category < ActiveHash::Base
   ]
 
   include ActiveHash::Associations # 記述してmoduleを取り込む
-  has_many :articles
+  has_many :foods
   # ActiveHashを用いて、has_manyを設定する
 end
