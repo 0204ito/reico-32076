@@ -15,5 +15,21 @@
   padding: 22px 188px 22px 10px;
   font-size: 93%;
   line-height: 1.1em;
-border: none;
+  border: none;
+  height: 150px;
 }
+
+ /* タブレット表示時 */
+ @media (max-width: 1024px) {
+ }
+
+ /* スマホ表示時 */
+ @media (max-width: 599px) {
+  .newreico-title{
+    font-size: 1.1em;
+    color: rgb(160, 218, 238);
+    margin-bottom: 20px;
+    margin-left: 28px;
+  }
+
+ }

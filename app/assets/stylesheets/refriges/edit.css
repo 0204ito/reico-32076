@@ -1,4 +1,6 @@
 /* user.css.erb */
+ /* refriges/new.css.erb */
+
 
 .refrige_delete{
   width: 200px;
@@ -20,5 +22,12 @@
   text-align: center;
   line-height: 50px;
   width: 200px;
+}
 
+ /* タブレット表示時 */
+ @media (max-width: 1024px) {
+ }
+
+  /* スマホ表示時 */
+@media (max-width: 599px) {
 }

@@ -20,13 +20,13 @@
 <%# <%= ここから画面left %> 
   <div class="page_left">
     <div class="sabu_left">
-            <%# <%= ここから冷蔵庫名 一覧 %> 
-          <div class="name">
+        <div class="name">
             <div class="name_left">
               <%= link_to current_user.nickname, edit_user_path(current_user) %>
             </div>
              <p class="name_end">の reico</p>
           </div>
+            <%# <%= ここから冷蔵庫名 一覧 %> 
             <% current_user.refriges.each do |refrige| %>
               <div class="refrige__btn">
                 <div class="refrige_name">
@@ -45,7 +45,7 @@
 <%# <%= ここから画面right %>
   <div class="page_right">
     <div class="sabu_right">
-      <p class="sabu-search-title">
+      <p class="sabu_refrige--title">
           ■冷蔵庫をクリックすると食材が一覧表示されます■
          </p>
      <%# <%= ここから食材一覧 %>
