@@ -59,149 +59,11 @@
 }
 
 /* ↓カテゴリ検索プルダウンメニュー */
-.category_menu{
-  margin-left: 370px;
-  list-style-type: none;
-  width: 120px;
-  height: 40px;
-  padding: 0;
-  background: #d1f0f7;
-  border-radius: 3px;
-}
-.category_menu li{
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-.category_menu li a{
-  display: block;
-  margin: 0;
-  padding: 13px 0;
-  color: #71c1f3;
-  font-size: 1.0em;
-  line-height: 1;
-  text-decoration: none;
-}
-.category_menu li ul{
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  margin: 0;
-  padding: 0;
-}
-.category_menu li:last-child ul{
-  width: 100%
-}
-.category_menu li ul li{
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  color: #71c1f3;
-  -moz-transition: .2s;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  -ms-transition: .2s;
-  transition: .2s;
-}
-.category_menu li ul li a{
-  padding: 13px 15px;
-  background: #d1f0f7;
-  text-align: left;
-  font-size: 12px;
-  font-weight: normal;
-}
-.category_menu li:hover > a{
-  background: #ffbbd8;
-  color: #fff;
-}
-.category_menu li:hover ul li{
-  overflow: visible;
-  height: 38px;
-  border-bottom: 1px solid #fff;
-}
-.category_menu li:hover ul li:first-child{
-  border-top: 0;
-}
-.category_menu li:hover ul li:last-child{
-  border-bottom: 0;
-}
 /* ↑カテゴリ検索プルダウンメニュー */
+
 /* ↓並び替えプルダウンメニュー */
-.sort_menu{
-  margin-left: 20px;
-  list-style-type: none;
-  width: 120px;
-  height: 40px;
-  padding: 0;
-  background: #d1f0f7;
-  border-radius: 3px;
-}
-
-.sort_menu li{
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-.sort_menu li a{
-  display: block;
-  margin: 0;
-  padding: 13px 0;
-  color: #71c1f3;
-  font-size: 1.0em;
-  line-height: 1;
-  text-decoration: none;
-}
-.sort_menu li ul{
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  margin: 0;
-  padding: 0;
-}
-.sort_menu li:last-child ul{
-  width: 100%
-}
-.sort_menu li ul li{
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  color: #71c1f3;
-  -moz-transition: .2s;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  -ms-transition: .2s;
-  transition: .2s;
-}
-.sort_menu li ul li a{
-  padding: 13px 15px;
-  background: #d1f0f7;
-  text-align: left;
-  font-size: 12px;
-  font-weight: normal;
-}
-.sort_menu li:hover > a{
-  background: #ffbbd8;
-  color: #fff;
-}
-.sort_menu li:hover ul li{
-  overflow: visible;
-  height: 38px;
-  border-bottom: 1px solid #fff;
-}
-.sort_menu li:hover ul li:first-child{
-  border-top: 0;
-}
-.sort_menu li:hover ul li:last-child{
-  border-bottom: 0;
-}
-
 /* ↑並び替えプルダウンメニュー */
+
 /* 検索部分終わり */
 
 /* 食材一覧部分 */
@@ -212,8 +74,176 @@
   padding: 20px;
   border-radius: 15px;
   overflow: scroll;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 160px);
 }
 .food_scroll{
   padding: 20px;
+}
+
+/* タブレット表示時 */
+@media (max-width: 1024px) {
+
+.right_search_bar{
+  display: flex;
+  justify-content:flex-end ;
+  align-items: flex-end;
+  width: 100%;
+  padding-right: 60px;
+}
+  .menu__search{
+  padding: 0;
+}
+/* 検索フォーム */
+  .search-form {
+  text-align: center;
+  display:flex
+}
+.search-form .search-input {
+  margin-right: 10px;
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #81c9f7;
+  border-radius: 3px;
+  font-size: 14px;
+}
+.search-form .search-btn {
+  width: 25%;
+  border: 1px solid #81c9f7;
+  border-radius: 3px;
+  color: #81c9f7;
+  background: #e4faff;
+  margin-right: 50px;
+  font-size: 15px;
+}
+.search-form .search-btn:hover{
+  color: #fff;
+  background: #ffbbd8;
+  border: 1px solid #ffbbd8;
+}
+/* ↓searchメインページ */
+.food-page {
+  width:100vw;
+  display: flex;
+  height: 100vh;
+}
+.in_search{
+  width: 100%;
+  margin: 30px 0 0 60px ;
+ display: block;
+}
+   /* 文字部分 */
+   /* 検索部分 */
+.search-food{
+  display:flex
+}
+.sabu-search-title{
+  color: white;
+  font-size: 18px;
+  margin: 10px 0 10px 15px;
+  width: 500px;
+}
+.sub_search{
+  display: flex;
+  margin-top: 35px;
+}
+
+/* ↓カテゴリ検索プルダウンメニュー */
+/* ↑カテゴリ検索プルダウンメニュー */
+/* ↓並び替えプルダウンメニュー */
+/* ↑並び替えプルダウンメニュー */
+/* 検索部分終わり */
+
+/* 食材一覧部分 */
+.sabu_food{
+  background-color: white;
+  width: calc(100vw - 112px);
+  margin: 10px 0 30px 0;
+  padding: 20px;
+  border-radius: 15px;
+  overflow: scroll;
+}
+.food_scroll{
+  padding: 20px;
+}
+}
+
+ /* スマホ表示時 */
+ @media (max-width: 599px) {
+  .right_search_bar{
+    display: flex;
+    justify-content:flex-end ;
+    width: 100%;
+    padding-right: 30px;
+  }
+    .menu__search{
+    padding: 0px 0px;
+  }
+  /* 検索フォーム */
+    .search-form {
+    text-align: center;
+    display:flex
+  }
+  .search-form .search-input {
+    margin-right: 5px;
+    width: 180px;
+    padding: 5px;
+    border: 1px solid #81c9f7;
+    border-radius: 3px;
+    font-size: 11px;
+  }
+  .search-form .search-btn {
+    width: 50px;
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  .search-form .search-btn:hover{
+    color: #fff;
+    background: #ffbbd8;
+    border: 1px solid #ffbbd8;
+  }
+  
+  /* ↓searchメインページ */
+  .in_search{
+    width: 100%;
+    margin: 30px 0 0 30px ;
+   display: block;
+  }
+  
+  .sabu-search-title{
+    color: white;
+    font-size: 14px;
+    margin: 5px 0 10px 20px;
+    width: 210px;
+  }
+  .sub_search{
+    display: flex;
+    margin-top: 0;
+  }
+  
+  /* ↓カテゴリ検索プルダウンメニュー */
+  /* ↑カテゴリ検索プルダウンメニュー */
+  
+  /* ↓並び替えプルダウンメニュー */
+  /* ↑並び替えプルダウンメニュー */
+  
+  /* 検索部分終わり */
+  
+  /* 食材一覧部分 */
+  .sabu_food{
+    background-color: white;
+    width: calc(100vw - 60px);
+    margin: 10px 0 30px 0;
+    padding: 20px;
+    border-radius: 15px;
+    overflow: scroll;
+    height: calc(100vh - 160px);
+    overflow-x: auto;
+  white-space: nowrap;
+  }
+  .food_scroll{
+    padding: 0;
+  }
+  .edit_btn{
+    font-size: 13px;
+  }
 }
