@@ -128,7 +128,7 @@
 }
 .in_search{
   width: 100%;
-  margin: 30px 0 0 60px ;
+  margin: 30px 0 0 56px ;
  display: block;
 }
    /* 文字部分 */
@@ -161,6 +161,7 @@
   padding: 20px;
   border-radius: 15px;
   overflow: scroll;
+  height: calc(100vh - 180px);
 }
 .food_scroll{
   padding: 20px;

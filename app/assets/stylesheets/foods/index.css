@@ -141,7 +141,7 @@ tr[data-check="true"] {
     padding: 20px;
     border-radius: 15px;
     overflow: scroll;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 40px);
   }
   .index_scroll{
     padding: 10px;
