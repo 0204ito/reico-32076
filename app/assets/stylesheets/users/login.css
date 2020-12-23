@@ -4,3 +4,15 @@
   display: flex;
   justify-content: center;
 }
+/* タブレット表示時 */
+@media (max-width: 1024px) {
+  .login-flash-message {
+    font-size: 1.7vw;
+  }
+}
+  /* スマホ表示時 */
+  @media (max-width: 599px) {
+    .login-flash-message {
+      font-size: 2.5vw;
+    }
+  }

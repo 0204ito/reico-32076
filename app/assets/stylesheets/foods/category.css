@@ -71,7 +71,7 @@
    /* タブレット表示時 */
  @media (max-width: 1024px) {
   .category_menu{
-    margin-left: 20px;
+    margin-left: 120px;
     list-style-type: none;
     width: 115px;
     height: 40px;
