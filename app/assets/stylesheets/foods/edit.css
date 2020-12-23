@@ -32,3 +32,69 @@
 .edit_btn a:hover {
   text-decoration: underline;
 }
+ /* タブレット表示時 */
+ @media (max-width: 1024px) {
+  .edit_actions{
+    margin-left:83.5% ;
+  }
+  .edit-btn-primary{
+    width: 155px;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    background-color: rgb(228, 154, 57);
+    display: block;
+    margin-top: 30px;
+  }
+  .food_delete{
+    width: 155px;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    background-color: rgb(228, 154, 57);
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 50px;
+  }
+ }
+  /* スマホ表示時 */
+@media (max-width: 599px) {
+  .edit_actions{
+    margin-left:0 ;
+  }
+  .edit-btn-primary{
+    /* width: 100px;
+    padding: 8px 15px;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    background-color: rgb(228, 154, 57);
+    display: block;
+    margin-top: 20px;
+    font-size: 13px; */
+    width: 130px;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    background-color: rgb(228, 154, 57);
+    display: block;
+    margin: 10px 0 0 208px;
+    font-size: 10px;
+  }
+  .food_delete{
+    width: 130px;
+    padding: 4px 8px;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    background-color: rgb(228, 154, 57);
+    display: block;
+    margin: 5px 0 0 208px;
+    font-size: 10px;
+  }
+ }
+
