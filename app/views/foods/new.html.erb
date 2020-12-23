@@ -40,22 +40,22 @@
         <tbody class="bulk-registration-field">
           <tr class="item" data-id=<%= @refrige.id%> id=new_food  data-check=<%= @food.checked %>>
             <td>
-              <%= f.text_field :food_name, id: "food_name", class: 'form-control'%>
+              <%= f.text_field :food_name, id: "food_name", class: 'food_name_form'%>
             </td>
             <td>
-              <%= f.text_field :product_name, id: "product_name", class: 'form-control'%>
+              <%= f.text_field :product_name, id: "product_name", class: 'product_name_form'%>
             </td>
             <td>
-              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:'form-control', id:"category_id"}) %>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:'category_id_form', id:"category_id"}) %>
             </td>
             <td>
-              <%= f.date_field  :purchase_date, id: "purchase_date", class: 'form-control'%>
+              <%= f.date_field  :purchase_date, id: "purchase_date", class: 'purchase_date_form'%>
             </td>
             <td>
-              <%= f.date_field :sell_by, id: "sell_by", class: 'form-control' %>
+              <%= f.date_field :sell_by, id: "sell_by", class: 'sell_by_form' %>
             </td>
             <td>
-              <%= f.text_field :shop, id: "shop", class: 'form-control'%>
+              <%= f.text_field :shop, id: "shop", class: 'shop_form'%>
             </td>
           </tr>
       </tbody>
@@ -64,7 +64,7 @@
     <div class="text-center">
       <%= f.submit '食材を追加', class: 'btn-btn-primary',id: "food_submit" %>
     </div>
-  <% end %>
+    <% end %>
     <div class="java_food">
       <div id="list">
       </div>

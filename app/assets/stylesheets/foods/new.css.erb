@@ -29,9 +29,30 @@
   border-bottom: solid 1px #eee;
   cursor: pointer;
 }
-.form-control{
-  border: 1px solid white;
-}
+.food_name_form{
+    font-size: 15px;
+    border: solid 1px white;
+  }
+  .product_name_form{
+    font-size: 15px;
+     border: solid 1px white;
+  }
+  .category_id_form{
+    font-size: 15px;
+     border: solid 1px white;
+  }
+  .purchase_date_form{
+    font-size: 15px;
+    border: solid 1px white;
+  }
+  .sell_by_form{
+    font-size: 15px;
+    border: solid 1px white;
+  }
+  .shop_form{
+    font-size: 15px;
+    border: solid 1px white;
+  }
 
 .text-center{
   display: flex;
@@ -47,13 +68,207 @@
   display: block;
   margin-top: 20px;
 }
-
 <%# 食材表示 %>
 .java_food{
   background-color: white;
    margin: 50px 0 30px 0;
-  padding: 20px;
+  padding: 30px;
   border-radius: 15px;
   overflow: scroll;
   height: 380px;
 }
+
+
+
+/* タブレット表示時 */
+@media (max-width: 1024px) {
+
+.food-page{
+  display: flex;
+  background-image: url("<%= asset_path('cook1.png') %>");
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+}
+.new-food{
+  margin: 10px auto;
+}
+.new-food-title{
+  margin: 10px 0 10px 30px;
+  color: white;
+  font-size: 15px;
+}
+.new-foodsub-title{
+  color: white;
+  font-size: 12px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+.food-spece{
+  width: calc(100vw - 90px);
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+}
+.form-table tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+.food_name_form{
+    font-size: 13px;
+    border: solid 1px white;
+  }
+  .product_name_form{
+    font-size: 13px;
+     border: solid 1px white;
+  }
+  .category_id_form{
+    font-size: 13px;
+     border: solid 1px white;
+  }
+  .purchase_date_form{
+    font-size: 13px;
+    border: solid 1px white;
+  }
+  .sell_by_form{
+    font-size: 13px;
+    border: solid 1px white;
+  }
+  .shop_form{
+    font-size: 13px;
+    border: solid 1px white;
+  }
+
+<%# 食材表示 %>
+.java_food{
+  overflow: scroll;
+  height: 300px;
+}
+}
+
+
+
+ /* スマホ表示時 */
+@media (max-width: 599px) {
+.new-food{
+  margin: 10px auto;
+}
+.new-food-title{
+  margin: 10px 0 10px 10px;
+  color: white;
+  font-size: 14px;
+}
+.new-foodsub-title{
+  color: white;
+  font-size: 11px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.food-page{
+  display: flex;
+  background-image: url("<%= asset_path('cook1.png') %>");
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+}
+.food-spece{
+  width: calc(100vw - 260px);
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  height: 180px;
+}
+.form-table tr{
+   display: block;
+    float: left;
+    height: 100px;
+    border: solid 1px white;
+}
+.form-table tr td, 
+.form-table tr th {
+    border-left: none;
+    display: block;
+    height: 26px;
+    font-size: 8px
+}
+table th,table td{
+  padding: 5px 5px;
+  border-bottom: solid 1px #eee;
+}
+
+  .form-table thead {
+    display: block;
+    float: left;
+    width: 30%;
+  }
+  .form-table thead tr {
+    width: 100%;
+  }
+    .form-table tbody {
+    display: block;
+  }
+    .form-table tbody tr {
+    width: 50%;
+  }
+    .form-table tr td + td {
+    border-left: none;
+  }
+
+.food_name_form{
+    font-size: 8px;
+    border: solid 1px white;
+    width: 150px;
+  }
+  .product_name_form{
+    font-size: 8px;
+     border: solid 1px white;
+     width: 150px;
+  }
+  .category_id_form{
+    font-size: 8px;
+     border: solid 1px white;
+     width: 150px;
+  }
+  .purchase_date_form{
+    font-size: 8px;
+    border: solid 1px white;
+    width: 150px;
+  }
+  .sell_by_form{
+    font-size: 8px;
+    border: solid 1px white;
+    width: 150px;
+  }
+  .shop_form{
+    font-size: 8px;
+    border: solid 1px white;
+    width: 150px;
+  }
+
+.text-center{
+  display: flex;
+ justify-content: flex-start ;
+}
+.btn-btn-primary{
+  width: 130px;
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 3px;
+  color: white;
+  background-color: rgb(228, 154, 57);
+  display: block;
+  margin: 5px 0 0 380px;
+  font-size: 10px;
+}
+<%# 食材表示 %>
+.java_food{
+  overflow: scroll;
+  height: 320px;
+  padding: 10px;
+  width: calc(100vw - 50px);
+  margin-left: 200px;
+  margin: 50px 0 30px 0;
+   overflow-x: auto;
+  white-space: nowrap;
+}
+ }

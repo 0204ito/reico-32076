@@ -1,0 +1,180 @@
+
+.item_js{
+  display: flex;
+  margin-bottom: 20px;
+}
+.food_name_js {
+  font-size: 15px;
+  /* border: solid 1px white; */
+  width: 20%;
+  height: 15px;
+  margin-left: 20px;
+}
+
+.product_name_js{
+  font-size: 15px;
+  width: 25%;
+  height: 20px;
+  margin-left: 20px;
+ 
+}
+.category_id_js{
+  font-size: 15px;
+  width: 15%;
+  height: 20px;
+  margin-left: 20px;
+}
+.purchase_date_js{
+  font-size: 15px;
+  width: 10%;
+  height: 20px;
+  margin-left: 20px;
+}
+.sell_by_js{
+  font-size: 15px;
+  width: 10%;
+  height: 20px;
+  margin-left: 20px;
+}
+.shop_js{
+  font-size: 15px;
+  width: 25%;
+  height: 20px;
+  margin:  0 20px;
+}
+
+/* タブレット表示時 */
+@media (max-width: 1024px) {
+  .item_js{
+    display: flex;
+    margin-bottom: 15px;
+  }
+  .food_name_js {
+    font-size: 13px;
+    width: 20%;
+    height: 15px;
+    margin-left: 20px;
+  }
+  
+  .product_name_js{
+    font-size: 13px;
+    width: 25%;
+    height: 20px;
+    margin-left: 20px;
+   
+  }
+  .category_id_js{
+    font-size: 13px;
+    width: 15%;
+    height: 20px;
+    margin-left: 20px;
+  }
+  .purchase_date_js{
+    font-size: 13px;
+    width: 12%;
+    height: 20px;
+    margin-left: 20px;
+  }
+  .sell_by_js{
+    font-size: 13px;
+    width: 12%;
+    height: 20px;
+    margin-left: 20px;
+  }
+  .shop_js{
+    font-size: 13px;
+    width: 25%;
+    height: 20px;
+    margin:  0 20px;
+  }
+}
+
+ /* スマホ表示時 */
+ @media (max-width: 599px) {
+  .item_js{
+    display: flex;
+    margin-bottom: 15px;
+  }
+  .food_name_js {
+    font-size: 13px;
+    width: 20%;
+    height: 15px;
+    margin-left: 20px;
+  }
+  
+  .product_name_js{
+    font-size: 13px;
+    width: 25%;
+    height: 20px;
+    margin-left: 20px;
+   
+  }
+  .category_id_js{
+    font-size: 13px;
+    width: 15%;
+    height: 20px;
+    margin-left: 20px;
+  }
+  .purchase_date_js{
+    font-size: 13px;
+    width: 12%;
+    height: 20px;
+    margin-left: 20px;
+  }
+  .sell_by_js{
+    font-size: 13px;
+    width: 12%;
+    height: 20px;
+    margin-left: 20px;
+  }
+  .shop_js{
+    font-size: 13px;
+    width: 25%;
+    height: 20px;
+    margin:  0 20px;
+  }
+}
+ /* スマホ表示時 */
+ @media (max-width: 599px) {
+  .item_js{
+    display: flex;
+  }
+  .food_name_js {
+    font-size: 8px;
+    width: 150px;
+    height: 15px;
+    margin-left: 10px;
+  }
+  
+  .product_name_js{
+    font-size: 8px;
+    width: 200px;
+    height: 20px;
+    margin-left: 10px;
+   
+  }
+  .category_id_js{
+    font-size: 8px;
+    width: 100px;
+    height: 20px;
+    margin-left: 10px;
+  }
+  .purchase_date_js{
+    font-size: 8px;
+    width: 90px;
+    height: 20px;
+    margin-left: 10px;
+  }
+  .sell_by_js{
+    font-size: 8px;
+    width: 90px;
+    height: 20px;
+    margin-left: 10px;
+  }
+  .shop_js{
+    font-size: 8px;
+    width: 200px;
+    height: 20px;
+    margin:  0 20px;
+  }
+  }

@@ -239,10 +239,11 @@ tr[data-check="true"] {
   padding: 20px; */
   border-radius: 15px;
   overflow: scroll;
-  height: 600px;
+  height: 610px;
   width: 540px;
   overflow-x: auto;
   white-space: nowrap;
+  padding: 15px;
 }
 .index_scroll{
   padding: 3px;
