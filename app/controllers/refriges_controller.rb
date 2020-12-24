@@ -32,9 +32,7 @@ class RefrigesController < ApplicationController
   def destroy
     # redirect_to refriges_path if @refrige.destroy
     # redirect_to action: :index unless @refrige.user_ids.include? current_user.id
-    if @refrige.destroy
-      redirect_to refriges_path and return
-    end
+    redirect_to refriges_path and return if @refrige.destroy
     redirect_to action: :index and return unless @refrige.user_ids.include? current_user.id
   end
 
