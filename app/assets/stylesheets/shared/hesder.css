@@ -56,119 +56,118 @@
 
  /* タブレット表示時 */
  @media (max-width: 1024px) {
-  .header {
-    background-color:  #e4faff;
-    margin-bottom: 20px;
-    padding: 20px 0;
-  }
-  .inner {
-    margin: 0 auto;
-    height: 86.61px;
-  }
-  .nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .left_bar{
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 60px ;
-  }
-  .logo {
-    width: 200px;
-    margin-right: 40px;
-  }
-  .right_bar{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 60px;
-  }
-  .nav__btn{
-    display: inline-block;
-    padding: 1.2em 2.6em;
-    font-size: 1.0em;
-    color: #71c1f3;
-    text-decoration: none;
-    user-select: none;
-    border: 1px #87CEFA solid;
-    border-radius: 3px;
-    transition: 0.4s ease;
-  }
-  .nav__btn:hover{
-    color: #fff;
-    background: #87CEFA;
-  }
-  .nav__logout{
-    display: inline-block;
-    padding: 0.4em 1.6em;
-    font-size: 0.8em;
-    color: #87CEFA;
-    text-decoration: none;
-    user-select: none;
-  }
-  .nav__logout:hover{
-    opacity: 0.5;
-  }
-
- }
+.header {
+  background-color:  #e4faff;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+.inner {
+  margin: 0 auto;
+  height: 86.61px;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left_bar{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 60px ;
+}
+.logo {
+  width: 200px;
+  margin-right: 40px;
+}
+.right_bar{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 60px;
+}
+.nav__btn{
+  display: inline-block;
+  padding: 1.2em 2.6em;
+  font-size: 1.0em;
+  color: #71c1f3;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+.nav__btn:hover{
+  color: #fff;
+  background: #87CEFA;
+}
+.nav__logout{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #87CEFA;
+  text-decoration: none;
+  user-select: none;
+}
+.nav__logout:hover{
+  opacity: 0.5;
+}
+}
 /* スマホ表示時 */
 @media (max-width: 599px) {
 
-  .header {
-    background-color:  #e4faff;
-    margin-bottom: 10px;
-    padding: 10px 0;
-  }
-  .inner {
-    margin: 0 auto;
-    height: 70px;
-  }
-  .nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .left_bar{
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 30px ;
-  }
-  .logo {
-    width: 120px;
-    margin: 10px 40px 0 0;
-  }
-  .right_bar{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 30px;
-  }
-  .nav__btn{
-    display: inline-block;
-    padding: 1em 2em;
-    font-size: 0.8em;
-    color: #71c1f3;
-    text-decoration: none;
-    user-select: none;
-    border: 1px #87CEFA solid;
-    border-radius: 3px;
-    transition: 0.4s ease;
-  }
-  .nav__btn:hover{
-    color: #fff;
-    background: #87CEFA;
-  }
-  .nav__logout{
-    display: inline-block;
-    padding: 0.4em 1.6em;
-    font-size: 0.8em;
-    color: #87CEFA;
-    text-decoration: none;
-    user-select: none;
-  }
-  .nav__logout:hover{
-    opacity: 0.5;
-  }
+.header {
+  background-color:  #e4faff;
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+.inner {
+  margin: 0 auto;
+  height: 70px;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left_bar{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px ;
+}
+.logo {
+  width: 120px;
+  margin: 10px 40px 0 0;
+}
+.right_bar{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+.nav__btn{
+  display: inline-block;
+  padding: 1em 2em;
+  font-size: 0.8em;
+  color: #71c1f3;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+.nav__btn:hover{
+  color: #fff;
+  background: #87CEFA;
+}
+.nav__logout{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #87CEFA;
+  text-decoration: none;
+  user-select: none;
+}
+.nav__logout:hover{
+  opacity: 0.5;
+}
 }

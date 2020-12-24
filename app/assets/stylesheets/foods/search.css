@@ -170,81 +170,81 @@
 
  /* スマホ表示時 */
  @media (max-width: 599px) {
-  .right_search_bar{
-    display: flex;
-    justify-content:flex-end ;
-    width: 100%;
-    padding-right: 30px;
-  }
-    .menu__search{
-    padding: 0px 0px;
-  }
-  /* 検索フォーム */
-    .search-form {
-    text-align: center;
-    display:flex
-  }
-  .search-form .search-input {
-    margin-right: 5px;
-    width: 180px;
-    padding: 5px;
-    border: 1px solid #81c9f7;
-    border-radius: 3px;
-    font-size: 11px;
-  }
-  .search-form .search-btn {
-    width: 50px;
-    margin-right: 10px;
-    font-size: 12px;
-  }
-  .search-form .search-btn:hover{
-    color: #fff;
-    background: #ffbbd8;
-    border: 1px solid #ffbbd8;
-  }
-  
-  /* ↓searchメインページ */
-  .in_search{
-    width: 100%;
-    margin: 30px 0 0 30px ;
-   display: block;
-  }
-  
-  .sabu-search-title{
-    color: white;
-    font-size: 14px;
-    margin: 5px 0 10px 20px;
-    width: 210px;
-  }
-  .sub_search{
-    display: flex;
-    margin-top: 0;
-  }
-  
-  /* ↓カテゴリ検索プルダウンメニュー */
-  /* ↑カテゴリ検索プルダウンメニュー */
-  
-  /* ↓並び替えプルダウンメニュー */
-  /* ↑並び替えプルダウンメニュー */
-  
-  /* 検索部分終わり */
-  
-  /* 食材一覧部分 */
-  .sabu_food{
-    background-color: white;
-    width: calc(100vw - 60px);
-    margin: 10px 0 30px 0;
-    padding: 20px;
-    border-radius: 15px;
-    overflow: scroll;
-    height: calc(100vh - 160px);
-    overflow-x: auto;
-  white-space: nowrap;
-  }
-  .food_scroll{
-    padding: 0;
-  }
-  .edit_btn{
-    font-size: 13px;
-  }
+.right_search_bar{
+  display: flex;
+  justify-content:flex-end ;
+  width: 100%;
+  padding-right: 30px;
+}
+  .menu__search{
+  padding: 0px 0px;
+}
+/* 検索フォーム */
+  .search-form {
+  text-align: center;
+  display:flex
+}
+.search-form .search-input {
+  margin-right: 5px;
+  width: 180px;
+  padding: 5px;
+  border: 1px solid #81c9f7;
+  border-radius: 3px;
+  font-size: 11px;
+}
+.search-form .search-btn {
+  width: 50px;
+  margin-right: 10px;
+  font-size: 12px;
+}
+.search-form .search-btn:hover{
+  color: #fff;
+  background: #ffbbd8;
+  border: 1px solid #ffbbd8;
+}
+
+/* ↓searchメインページ */
+.in_search{
+  width: 100%;
+  margin: 30px 0 0 30px ;
+  display: block;
+}
+
+.sabu-search-title{
+  color: white;
+  font-size: 14px;
+  margin: 5px 0 10px 20px;
+  width: 210px;
+}
+.sub_search{
+  display: flex;
+  margin-top: 0;
+}
+
+/* ↓カテゴリ検索プルダウンメニュー */
+/* ↑カテゴリ検索プルダウンメニュー */
+
+/* ↓並び替えプルダウンメニュー */
+/* ↑並び替えプルダウンメニュー */
+
+/* 検索部分終わり */
+
+/* 食材一覧部分 */
+.sabu_food{
+  background-color: white;
+  width: calc(100vw - 60px);
+  margin: 10px 0 30px 0;
+  padding: 20px;
+  border-radius: 15px;
+  overflow: scroll;
+  height: calc(100vh - 160px);
+  overflow-x: auto;
+white-space: nowrap;
+}
+.food_scroll{
+  padding: 0;
+}
+.edit_btn{
+  font-size: 13px;
+}
 }

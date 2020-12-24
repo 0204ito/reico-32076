@@ -68,46 +68,46 @@
   border-bottom: 0;
 }
 
-   /* タブレット表示時 */
- @media (max-width: 1024px) {
-  .category_menu{
-    margin-left: 120px;
-    list-style-type: none;
-    width: 115px;
-    height: 40px;
-    padding: 0;
-    background: #d1f0f7;
-    border-radius: 3px;
-  }
-  .category_menu li a{
-    font-size: 14px;
-  }
-  .category_menu li ul li a{
-    font-size: 12px;
-  }
-  .category_menu li:hover ul li{
-    height: 34px;
-  }
- }
+  /* タブレット表示時 */
+@media (max-width: 1024px) {
+.category_menu{
+  margin-left: 120px;
+  list-style-type: none;
+  width: 115px;
+  height: 40px;
+  padding: 0;
+  background: #d1f0f7;
+  border-radius: 3px;
+}
+.category_menu li a{
+  font-size: 14px;
+}
+.category_menu li ul li a{
+  font-size: 12px;
+}
+.category_menu li:hover ul li{
+  height: 34px;
+}
+}
 
  /* スマホ表示時 */
  @media (max-width: 599px) {
-  .category_menu{
-    margin-left: 20px;
-    list-style-type: none;
-    width: 100px;
-    height: 35px;
-    padding: 0;
-    background: #d1f0f7;
-    border-radius: 3px;
-  }
-  .category_menu li a{
-    font-size: 11px;
-  }
-  .category_menu li ul li a{
-    font-size: 10px;
-  }
-  .category_menu li:hover ul li{
-    height: 33px;
-  }
+.category_menu{
+  margin-left: 20px;
+  list-style-type: none;
+  width: 100px;
+  height: 35px;
+  padding: 0;
+  background: #d1f0f7;
+  border-radius: 3px;
+}
+.category_menu li a{
+  font-size: 11px;
+}
+.category_menu li ul li a{
+  font-size: 10px;
+}
+.category_menu li:hover ul li{
+  height: 33px;
+}
 }

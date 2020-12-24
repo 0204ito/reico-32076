@@ -109,126 +109,126 @@ tr[data-check="true"] {
  /* タブレット表示時 */
  @media (max-width: 1024px) {
 
-  .page_right {
-    width: calc(100vw - 250px);
-    display: flex;
-    padding-right:10px;
-    height: 100vh;
-    margin-top: 30px;
+.page_right {
+  width: calc(100vw - 250px);
+  display: flex;
+  padding-right:10px;
+  height: 100vh;
+  margin-top: 30px;
+}
+.in_index{
+  display: block;
+}
+.refrige_right{
+padding-bottom: 10px;
+}
+.refrige_right a {
+  font-size: 25px;
+  position: relative;
+  text-decoration: none;
+  color: #b8e9f8;
+  margin: 0 20px;
   }
-  .in_index{
-   display: block;
-  }
-  .refrige_right{
-  padding-bottom: 10px;
-  }
-  .refrige_right a {
-    font-size: 25px;
-    position: relative;
-    text-decoration: none;
-    color: #b8e9f8;
-    margin: 0 20px;
-    }
-  .refrige_right a:hover {
-    text-decoration: underline;
-  }
-  
-  /* 表部分 */
-  .sabu_index_food{
-    background-color: white;
-    width: calc(100vw - 280px);
-    margin: 10px 0 30px 0;
-    padding: 20px;
-    border-radius: 15px;
-    overflow: scroll;
-    height: calc(100vh - 40px);
-  }
-  .index_scroll{
-    padding: 10px;
-  }
-  table{
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-  }
-  table tr{
-    border-bottom: solid 1px #eee;
-    cursor: pointer;
-  }
-  table tr:hover{
-    background-color: #d4f0fd;
-  }
-  
-  table th{
-    color: rgb(218, 79, 79);
-    font-size: 12px;
-  }
-  table th,table td{
-    padding: 10px 3px;
-    border-bottom: solid 1px #eee;
-  }
-  
-  .food_name{
-    font-size: 12px;
-  }
-  .product_name{
-    font-size: 12px;
-  }
-  .category_id{
-    width: 13%;
-    font-size: 12px;
-  }
-  .purchase_date{
-    font-size: 12px;
-  }
-  .sell_by{
-    font-size: 12px;
-  }
-  .shop{
-    font-size: 12px;
-  }
-  tr[data-check="true"] {
-    text-decoration: line-through;
-    color: #6acfe6;
-  }
- }
+.refrige_right a:hover {
+  text-decoration: underline;
+}
+
+/* 表部分 */
+.sabu_index_food{
+  background-color: white;
+  width: calc(100vw - 280px);
+  margin: 10px 0 30px 0;
+  padding: 20px;
+  border-radius: 15px;
+  overflow: scroll;
+  height: calc(100vh - 40px);
+}
+.index_scroll{
+  padding: 10px;
+}
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+table tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+table tr:hover{
+  background-color: #d4f0fd;
+}
+
+table th{
+  color: rgb(218, 79, 79);
+  font-size: 12px;
+}
+table th,table td{
+  padding: 10px 3px;
+  border-bottom: solid 1px #eee;
+}
+
+.food_name{
+  font-size: 12px;
+}
+.product_name{
+  font-size: 12px;
+}
+.category_id{
+  width: 13%;
+  font-size: 12px;
+}
+.purchase_date{
+  font-size: 12px;
+}
+.sell_by{
+  font-size: 12px;
+}
+.shop{
+  font-size: 12px;
+}
+tr[data-check="true"] {
+  text-decoration: line-through;
+  color: #6acfe6;
+}
+}
 
   /* スマホ表示時 */
 @media (max-width: 599px) {
-  .menu__btn{
-    display: inline-block;
-    padding: 1em 1.5em;
-    font-size: 0.8em;
-    color: #87CEFA;
-    text-decoration: none;
-    user-select: none;
-    border: 1px #87CEFA solid;
-    border-radius: 3px;
-    transition: 0.4s ease;
-    margin:0 10px;
+.menu__btn{
+  display: inline-block;
+  padding: 1em 1.5em;
+  font-size: 0.8em;
+  color: #87CEFA;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin:0 10px;
+}
+.page_right {
+  width: calc(100vw - 320px);
+  display: flex;
+  padding-left:30px;
+  height: 100vh;
+}
+.in_index{
+  display: block;
+}
+.refrige_right{
+  width: calc(100vw - 320px);
+padding-bottom: 5px;
+}
+.refrige_right a {
+  font-size: 20px;
+  position: relative;
+  text-decoration: none;
+  color: #b8e9f8;
   }
-  .page_right {
-    width: calc(100vw - 320px);
-    display: flex;
-    padding-left:30px;
-    height: 100vh;
-  }
-  .in_index{
-   display: block;
-  }
-  .refrige_right{
-    width: calc(100vw - 320px);
-  padding-bottom: 5px;
-  }
-  .refrige_right a {
-    font-size: 20px;
-    position: relative;
-    text-decoration: none;
-    color: #b8e9f8;
-    }
-  .refrige_right a:hover {
-    text-decoration: underline;
-  }
+.refrige_right a:hover {
+  text-decoration: underline;
+}
 
 
 /* 表部分 */

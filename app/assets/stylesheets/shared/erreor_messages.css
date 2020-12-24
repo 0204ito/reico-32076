@@ -9,20 +9,20 @@
   color: rgb(243, 226, 226);
 }
  /* タブレット表示時 */
- @media (max-width: 1024px) {
+@media (max-width: 1024px) {
+.error-alert {
+  margin-bottom: 3vh;
+}
+.error-message {
+  font-size: 1.7vw;
+}
+}
+/* スマホ表示時 */
+@media (max-width: 599px) {
   .error-alert {
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
   }
   .error-message {
-    font-size: 1.7vw;
+    font-size: 2.5vw;
   }
- }
-  /* スマホ表示時 */
-  @media (max-width: 599px) {
-    .error-alert {
-      margin-bottom: 2vh;
-    }
-    .error-message {
-      font-size: 2.5vw;
-    }
-  }
+}
