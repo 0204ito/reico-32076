@@ -104,7 +104,14 @@ ___
 * 賞味期限が3日以内の食材が赤く表示されるような機能をつけたいです。
 
 ___
-## DB 
+## ER図
+![reico ER図](https://user-images.githubusercontent.com/73625783/103051377-0096c500-45da-11eb-8c72-16940b092f0c.png)
+
+
+
+
+___
+## DB
 
 ### 〔 users テーブル 〕
 
