@@ -1,17 +1,19 @@
 require 'rails_helper'
 
-def visit_with_http_auth(path)
-  username = ['STUDY']
-  password = ['STUDY_password']
-  visit "http://#{username}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}#{path}"
-end
 
 RSpec.describe 'ユーザー新規登録', type: :system do
+  def visit_with_http_auth(path)
+    username = 'ito'
+    password = '0204'
+    visit "http://#{username}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}#{path}"
+  end
+  
   before do
     @user = FactoryBot.build(:user)
   end
   context 'ユーザー新規登録ができるとき' do
     it '正しい情報を入力すればユーザー新規登録ができてトップページに移動する' do
+      visit_with_http_auth(path)
       # トップページに移動する
       visit_with_http_auth root_path
       # トップページにサインアップページへ遷移するボタンがあることを確認する
@@ -24,13 +26,13 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       fill_in 'パスワード', with: @user.password
       fill_in 'パスワード確認', with: @user.password_confirmation
       # サインアップボタンを押すとユーザーモデルのカウントが1上がることを確認する
-      expect  do
+      expect  {
         find('input[name="commit"]').click
-      end.to change { User.count }.by(1)
+      }.to change { User.count }.by(1)
       # 冷蔵庫新規作成画面へ遷移する
       visit new_refrige_path
       # 冷蔵庫登録ページにトップページへ遷移するボタンがあることを確認する
-      expect(page).to have_content('logo')
+      find(".logo").click
       # トップページへ遷移したことを確認する
       expect(current_path).to eq root_path
       # ログアウトボタンが表示されることを確認する
@@ -49,10 +51,10 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       # 新規登録ページへ移動する
       visit new_user_registration_path
       # ユーザー情報を入力する
-      fill_in 'Nickname', with: ''
-      fill_in 'Email', with: ''
-      fill_in 'Password', with: ''
-      fill_in 'Password confirmation', with: ''
+      fill_in 'ニックネーム', with: ''
+      fill_in 'メールアドレス', with: ''
+      fill_in 'パスワード', with: ''
+      fill_in 'パスワード確認', with: ''
       # サインアップボタンを押してもユーザーモデルのカウントは上がらないことを確認する
       expect  do
         find('input[name="commit"]').click
