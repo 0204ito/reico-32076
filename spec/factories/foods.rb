@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :food do
-    food_name              { Faker::Name }
+    food_name              { 'aaa' }
     product_name           { 'aaa' }
     category_id            { 2 }
     purchase_date          { '2020/10/01' }
