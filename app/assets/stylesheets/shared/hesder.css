@@ -1,7 +1,7 @@
 .header {
   background-color:  #e4faff;
-  margin-bottom: 20px;
-  padding: 20px 0;
+  margin-bottom: 1%;
+  padding: 1% 0 1.5% 0;
 }
 .inner {
   margin: 0 auto;
@@ -16,16 +16,15 @@
 .left_bar{
   display: flex;
   justify-content: flex-start;
-  padding-left: 35vh ;
+  padding-left: 20%;
 }
 .logo {
   width: 200px;
-  margin-right: 40px;
 }
 .right_bar{
   display: flex;
   justify-content: flex-end;
-  padding-right: 35vh;
+  padding-right: 20%;
 }
 .nav__btn{
   display: inline-block;
@@ -56,38 +55,18 @@
 
  /* タブレット表示時 */
  @media (max-width: 1024px) {
-.header {
-  background-color:  #e4faff;
-  margin-bottom: 20px;
-  padding: 20px 0;
-}
-.inner {
-  margin: 0 auto;
-  height: 86.61px;
-}
-.nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.logo {
+  width: 180px;
 }
 .left_bar{
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 60px ;
-}
-.logo {
-  width: 200px;
-  margin-right: 40px;
+  padding-left: 10%;
 }
 .right_bar{
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 60px;
+  padding-right: 10%;
 }
 .nav__btn{
   display: inline-block;
-  padding: 1.2em 2.6em;
+  padding: 1.0em 2.0em;
   font-size: 1.0em;
   color: #71c1f3;
   text-decoration: none;
@@ -108,28 +87,37 @@
   text-decoration: none;
   user-select: none;
 }
+
 .nav__logout:hover{
   opacity: 0.5;
 }
 }
-/* スマホ表示時 */
-@media (max-width: 599px) {
+/* 中間表示時 */
+@media (max-width:640px) {
+  .inner {
+    margin: 0 auto;
+    height: 70px;
+  }
+  .logo {
+    width: 150px;
+  }
+  .left_bar{
+    padding-left: 7%;
+  }
+  .right_bar{
+    padding-right: 7%;
+  }
+  .nav__btn{
+    padding: 1.0em 1.8em;
+    font-size: 0.8em;
+    border: 1px #87CEFA solid;
+  }
+}
 
-.header {
-  background-color:  #e4faff;
-  margin-bottom: 10px;
-  padding: 10px 0;
-}
-.inner {
-  margin: 0 auto;
-  height: 70px;
-}
-.nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
+/* スマホ表示時 */
+@media (max-width: 480px) {
+
 .left_bar{
   display: flex;
   justify-content: flex-start;
