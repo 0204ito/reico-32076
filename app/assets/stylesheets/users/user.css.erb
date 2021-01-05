@@ -3,6 +3,7 @@
     background-image: url("<%= asset_path('cook1.png') %>");
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 .new-sing{
   font-size: 40px;
@@ -31,47 +32,46 @@
 }
  /* タブレット表示時 */
 @media (max-width: 1024px) {
-  
 }
 
+ /* 中間表示時 */
+@media (max-width: 640px) {
+.new-sing{
+  font-size: 200%;
+  padding-top: 8%;
+  margin-left: 10%;
+}
+}
  /* スマホ表示時 */
 @media (max-width: 599px) {
-
+.container{
+  width: 100%;
+}
 .new-sing{
-  font-size: 25px;
-  color:rgb(240, 189, 123);
-  padding-top: 50px;
-  margin-left: 30px;
+  font-size: 200%;
+  padding-top: 8%;
+  margin-left: 10%;
 }
 .new_user{
-  width: 600px;
-  padding-left: 60px;
+  width: 100%;
+  padding-left: 0px;
+}
+.field {
+ margin-left: 10%;
 }
 .input-default{
-  width: 500px;
+  width: 80%;
+  margin-left: 10%;
   padding: 10px;
   border: 1px solid white;
   display: block;
 }
 .send {
   width: 150px;
-  margin: 20px 350px;
+  margin: 5% 65%;
   padding: 13px;
   border: 1px solid white;
   border-radius: 3px;
-  color: white;
-  background-color: rgb(228, 154, 57);
-  display: block;
 }
 }
-  /* スマホ表示時 */
-  @media (max-width: 599px) {
-    .input-default{
-  width: 500px;
-  padding: 10px;
-  border: 1px solid white;
-  display: block;
-  font-size: 15px;
-}
-  }
 
