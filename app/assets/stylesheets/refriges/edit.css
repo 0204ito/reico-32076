@@ -13,9 +13,6 @@
   background-color: rgb(228, 154, 57);
   border: 1.5px solid;
   border-color: white;
-/* position: absolute;
-  top: 580px;
-  left: 555px; */
   margin-left: 300px ;
 }
 .refrige_delete a {
@@ -30,4 +27,12 @@
 
   /* スマホ表示時 */
 @media (max-width: 599px) {
+.refrige_delete{
+  width: 150px;
+  padding: 7px 48px;
+  border: 1px solid white;
+  border-radius: 3px;
+  margin: 2% 0% 0% 60%;
+  float: right;
+}
 }

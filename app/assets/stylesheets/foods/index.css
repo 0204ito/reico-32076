@@ -21,7 +21,7 @@
 /*ここから下right部分*/
 
 .page_right {
-  width: calc(100vw - 320px);
+  width: calc(100vw - 25%);
   display: flex;
   padding-right:10px;
   height: 100vh;
@@ -110,7 +110,7 @@ tr[data-check="true"] {
  @media (max-width: 1024px) {
 
 .page_right {
-  width: calc(100vw - 250px);
+  width: calc(100vw - 25%);
   display: flex;
   padding-right:10px;
   height: 100vh;
@@ -122,6 +122,7 @@ tr[data-check="true"] {
 .refrige_right{
 padding-bottom: 10px;
 }
+
 .refrige_right a {
   font-size: 25px;
   position: relative;
