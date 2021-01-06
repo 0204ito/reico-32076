@@ -27,7 +27,7 @@ RSpec.describe '冷蔵庫作成', type: :system do
     # 冷蔵庫のリンクをクリックする
     find('.refrige_name').click
     # 冷蔵庫ページへ遷移
-    expect(current_path).to eq  refrige_foods_path(@refrige_user.refrige_id)
+    expect(current_path).to eq refrige_foods_path(@refrige_user.refrige_id)
     # 食材追加のリンクがある事を確認
     expect(page).to have_content('食材追加')
     # 食材追加ページへ遷移
@@ -36,18 +36,16 @@ RSpec.describe '冷蔵庫作成', type: :system do
     fill_in 'food[food_name]', with: @food.food_name
     fill_in 'food[product_name]', with: @food.product_name
     category_name = @food.category.name
-    select category_name, from: "food[category_id]"
+    select category_name, from: 'food[category_id]'
     fill_in 'food[purchase_date]', with: @food.purchase_date
     fill_in 'food[sell_by]', with: @food.sell_by
     fill_in 'food[shop]', with: @food.shop
     # 送信するとFoodモデルのカウントが1上がることを確認する
-    expect {
+    expect do
       find('input[name="commit"]').click
-      }.to change { Food.count }.by(1)
+    end.to change { Food.count }.by(1)
     # 冷蔵庫ページへ遷移
     find('.menu__right').click
     # 冷蔵庫ページに先ほど追加した食材が含まれている事を確認する
-
   end
-
 end

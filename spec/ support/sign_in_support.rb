@@ -1,5 +1,5 @@
 module SignInSupport
-  def sign_in(user)
+  def sign_in(_user)
     visit root_path
     expect(page).to have_content('ログイン')
     visit new_user_session_path

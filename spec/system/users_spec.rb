@@ -1,13 +1,12 @@
 require 'rails_helper'
 
-
 RSpec.describe 'ユーザー新規登録', type: :system do
   def visit_with_http_auth(path)
     username = ENV['BASIC_AUTH_USER']
     password = ENV['BASIC_AUTH_PASSWORD']
     visit "http://#{username}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}#{path}"
   end
-  
+
   before do
     @user = FactoryBot.build(:user)
   end
@@ -26,13 +25,13 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       fill_in 'パスワード', with: @user.password
       fill_in 'パスワード確認', with: @user.password_confirmation
       # サインアップボタンを押すとユーザーモデルのカウントが1上がることを確認する
-      expect  {
+      expect  do
         find('input[name="commit"]').click
-      }.to change { User.count }.by(1)
+      end.to change { User.count }.by(1)
       # 冷蔵庫新規作成画面へ遷移する
       visit new_refrige_path
       # 冷蔵庫登録ページにトップページへ遷移するボタンがあることを確認する
-      find(".logo").click
+      find('.logo').click
       # トップページへ遷移したことを確認する
       expect(current_path).to eq root_path
       # ログアウトボタンが表示されることを確認する
@@ -84,9 +83,9 @@ RSpec.describe 'ログイン', type: :system do
       find('input[name="commit"]').click
       # トップページへ遷移することを確認する
       expect(current_path).to eq root_path
-       # サインアップページへ遷移するボタンや、ログインページへ遷移するボタンが表示されていないことを確認する
-       expect(page).to have_no_content('新規登録')
-       expect(page).to have_no_content('ログイン')
+      # サインアップページへ遷移するボタンや、ログインページへ遷移するボタンが表示されていないことを確認する
+      expect(page).to have_no_content('新規登録')
+      expect(page).to have_no_content('ログイン')
     end
   end
   context 'ログインができないとき' do
@@ -98,8 +97,8 @@ RSpec.describe 'ログイン', type: :system do
       # ログインページへ遷移する
       visit new_user_session_path
       # ユーザー情報を入力する
-      fill_in 'メールアドレス', with: ""
-      fill_in 'パスワード', with: ""
+      fill_in 'メールアドレス', with: ''
+      fill_in 'パスワード', with: ''
       # ログインボタンを押す
       find('input[name="commit"]').click
       # ログインページへ戻されることを確認する
